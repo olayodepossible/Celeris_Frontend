@@ -1,0 +1,208 @@
+/* --no-ignore */
+.analysisText {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+
+.analysisH2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 79.99px;
+  letter-spacing: -1px;
+  z-index: 2;
+  width: 700px;
+}
+
+.analysisPara {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.imgResponsive {
+  width: 710px;
+  margin-left: -60px;
+}
+.imgResponsive::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url('../../assets/images/expansionBg.png');
+  background-size: 100%;
+}
+
+.finance {
+  gap: 34px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 173px;
+  font-family: "DM Sans";
+}
+
+.financeHeader {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14.2px;
+  font-weight: 700;
+}
+
+.insights {
+  margin-bottom: 130px;
+  font-family: "DM Sans";
+  display: flex;
+  flex-direction: column;
+}
+
+.insightsHeading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 55.02px;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.insightsSubheading {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  max-width: 663px;
+  margin-bottom: 95px;
+}
+
+.insights span {
+  align-self: flex-end;
+  margin-right: 100px;
+  margin-top: 78px;
+}
+
+.bigdata {
+  background: #0577FE;
+  color: #fff;
+  padding: 44px 33px 0px;
+  gap: 0px;
+  border-radius: 40px;
+  font-family: "DM Sans";
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bigdata h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+}
+
+.bigdata p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  max-width: 383px;
+  margin-bottom: 75px;
+}
+
+.busImg::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: -1;
+  background-image: url('../../assets/images/expansionBg.png');
+  background-size: 100%;
+}
+
+.busExpansion>h2 {
+  max-width: 475px;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 55.02px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.busExpansion>p {
+  max-width: 470px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.expansionFeatures {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 17px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 267px;
+}
+
+.expansionFeatures li {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+
+.explore {
+  background: #1A1F37;
+  padding: 100px 150px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 140px;
+}
+
+.exploreContent {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 589px;
+  text-align: left;
+}
+
+.exploreContent > h2 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 55.02px;
+}
+
+.exploreContent > p {
+  max-width: 496px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}
+
+.explore img {
+  margin-top: -335px;
+}

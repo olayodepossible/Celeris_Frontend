@@ -1,0 +1,27 @@
+.card {
+  width: 329px;
+  min-height: 295px;
+  height: fit-content;
+  padding: 48px 26px;
+  border-radius: 40px;
+  text-align: left;
+  background: #F5F5F5;
+}
+
+.cardImg {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 18px;
+}
+.cardTitle {
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 35px;
+}
+.cardContent {
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
