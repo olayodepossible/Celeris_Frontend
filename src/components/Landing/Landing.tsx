@@ -1,121 +1,12 @@
 import * as React from 'react';
 import { CelerisPrimaryBtn, CelerisSecondaryBtn } from '../../shared/Button';
 import styles from './Landing.module.css';
-import Imports from './Landing.imports';
+import Imports, { companies, settings, sliderItems } from './Landing.imports';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Card from '../../shared/Card/Card';
 import Slider from 'react-slick';
 
-export interface ICompaniesProps {
-  icon: string;
-  name: string;
-}
-export interface ISlider extends ICompaniesProps {
-  comment: string;
-  role: string;
-  company: string;
-}
-const companies: ICompaniesProps[] = [
-  {
-    icon: Imports.company1,
-    name: 'Company Name',
-  },
-  {
-    icon: Imports.company2,
-    name: 'Company Name',
-  },
-  {
-    icon: Imports.company3,
-    name: 'Company Name',
-  },
-  {
-    icon: Imports.company4,
-    name: 'Company Name',
-  },
-  {
-    icon: Imports.company5,
-    name: 'Company Name',
-  },
-];
-const sliderItems: ISlider[] = [
-  {
-    icon: Imports.company1,
-    name: 'John carter',
-    comment:
-      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”',
-    role: 'CEO',
-    company: 'Company',
-  },
-  {
-    icon: Imports.company2,
-    name: 'John carter',
-    comment:
-      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”',
-    role: 'CEO',
-    company: 'Company',
-  },
-  {
-    icon: Imports.company3,
-    name: 'John carter',
-    comment:
-      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”',
-    role: 'CEO',
-    company: 'Company',
-  },
-  {
-    icon: Imports.company4,
-    name: 'John carter',
-    comment:
-      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”',
-    role: 'CEO',
-    company: 'Company',
-  },
-  {
-    icon: Imports.company5,
-    name: 'John carter',
-    comment:
-      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”',
-    role: 'CEO',
-    company: 'Company',
-  },
-];
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 2000,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  pauseOnHover: true,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
 
 export default function Landing() {
   return (
@@ -246,7 +137,7 @@ export default function Landing() {
         </section>
       </main>
 
-        {/* Explore section */}
+      {/* Explore section */}
       <section
         className={`d-flex flex-lg-row flex-column-reverse ${styles.explore}`}
       >
