@@ -7,7 +7,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import Card from '../../shared/Card/Card';
 import Slider from 'react-slick';
 
-
 export default function Landing() {
   return (
     <>

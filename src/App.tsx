@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './App.css';
 
-import Main from './Layouts/Navbar';
+import Main from './Layouts';
 import Landing from './components/Landing/Landing';
 
 const App = () => {
