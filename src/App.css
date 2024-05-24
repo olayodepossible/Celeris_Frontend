@@ -1,24 +1,14 @@
-.App {
-  text-align: center;
+.slick-initialized .slick-slide {
+  margin: 0px 13px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.slick-prev:before,
+.slick-next:before,
+.slick-next,
+.slick-prev {
+  display: none !important;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.slick-track,.slick-slider .slick-track, .slick-slider .slick-list {
+  max-height: 343px;
 }

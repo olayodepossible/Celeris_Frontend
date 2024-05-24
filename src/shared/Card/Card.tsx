@@ -15,7 +15,7 @@ const Card = ({ img, title, content, button }: ICardProps) => {
       <img src={img} alt="Image title" className={styles.cardImg} />
       <h3 className={styles.cardTitle}>{title}</h3>
       <p className={styles.cardContent}>{content}</p>
-      {button && <CelerisPrimaryBtn rounded>{button}</CelerisPrimaryBtn>}
+      {button && <CelerisPrimaryBtn rounded="true">{button}</CelerisPrimaryBtn>}
     </div>
   );
 };

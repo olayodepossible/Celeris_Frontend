@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 interface ButtonProps {
-  rounded?: boolean;
+  rounded?: "true"|"false";
 }
 export const CelerisPrimaryBtn = styled.button<ButtonProps>`
   background: #207edf;
@@ -8,7 +8,7 @@ export const CelerisPrimaryBtn = styled.button<ButtonProps>`
   border-radius: ${(props) => (props.rounded ? '80px' : '10px')};
   color: #fff;
   border: none;
-  padding: ${(props) => (props.rounded === true ? '27px 32px' : '10px')};
+  padding: ${(props) => (props.rounded === "true" ? '27px 32px' : '10px')};
   width: fit-content;
   font-family: 'DM Sans';
   font-size: 16px;

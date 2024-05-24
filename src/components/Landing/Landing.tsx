@@ -2,11 +2,19 @@ import * as React from 'react';
 import { CelerisPrimaryBtn, CelerisSecondaryBtn } from '../../shared/Button';
 import styles from './Landing.module.css';
 import Imports from './Landing.imports';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import Card from '../../shared/Card/Card';
+import Slider from 'react-slick';
 
 export interface ICompaniesProps {
   icon: string;
   name: string;
+}
+export interface ISlider extends ICompaniesProps {
+  comment: string;
+  role: string;
+  company: string;
 }
 const companies: ICompaniesProps[] = [
   {
@@ -30,13 +38,91 @@ const companies: ICompaniesProps[] = [
     name: 'Company Name',
   },
 ];
+const sliderItems: ISlider[] = [
+  {
+    icon: Imports.company1,
+    name: 'John carter',
+    comment:
+      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”',
+    role: 'CEO',
+    company: 'Company',
+  },
+  {
+    icon: Imports.company2,
+    name: 'John carter',
+    comment:
+      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”',
+    role: 'CEO',
+    company: 'Company',
+  },
+  {
+    icon: Imports.company3,
+    name: 'John carter',
+    comment:
+      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”',
+    role: 'CEO',
+    company: 'Company',
+  },
+  {
+    icon: Imports.company4,
+    name: 'John carter',
+    comment:
+      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”',
+    role: 'CEO',
+    company: 'Company',
+  },
+  {
+    icon: Imports.company5,
+    name: 'John carter',
+    comment:
+      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”',
+    role: 'CEO',
+    company: 'Company',
+  },
+];
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 2000,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
 export default function Landing() {
   return (
     <>
       <main className="container">
         {/* Hero section */}
-        <section className="row row-cols-lg-2 row-cols-sm-1 align-items-center mt-5 pt-5 position-relative w-100">
+        <section className="d-flex flex-xl-row flex-column-reverse align-items-center justify-content-between w-100">
           <div className={styles.analysisText}>
             <h2 className={styles.analysisH2}>
               Empower Your Lending Decisions with Advanced Credit Analytics
@@ -45,15 +131,14 @@ export default function Landing() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
               nulla suspendisse tortor aenean dis placerat.
             </p>
-            <CelerisPrimaryBtn rounded>GET STARTED</CelerisPrimaryBtn>
+            <CelerisPrimaryBtn rounded="true">GET STARTED</CelerisPrimaryBtn>
           </div>
-          <div>
-            <img
-              src={Imports.analysis}
-              alt="Advancec Credit Analysis"
-              className={`img-responsive ${styles.imgResponsive}`}
-            />
-          </div>
+
+          <img
+            src={Imports.analysis}
+            alt="Advancec Credit Analysis"
+            className={`img-responsive ${styles.imgResponsive}`}
+          />
         </section>
 
         {/* Finance section */}
@@ -124,12 +209,12 @@ export default function Landing() {
             </div>
           </div>
           <span className="d-flex justify-self-end">
-            <CelerisPrimaryBtn rounded>Request Demo</CelerisPrimaryBtn>
+            <CelerisPrimaryBtn rounded="true">Request Demo</CelerisPrimaryBtn>
           </span>
         </section>
 
         {/* Business Expansion Section */}
-        <section className="row position-relative g-5 row-cols-xl-2 row-cols-lg-1">
+        <section className="row justify-content-between position-relative g-5 row-cols-xl-2 row-cols-lg-1">
           <div className={styles.busImg}>
             <img src={Imports.expansion} alt="Business Expansion Image" />
           </div>
@@ -159,17 +244,19 @@ export default function Landing() {
             </ul>
           </div>
         </section>
+      </main>
 
         {/* Explore section */}
-      </main>
-      <section className={styles.explore}>
+      <section
+        className={`d-flex flex-lg-row flex-column-reverse ${styles.explore}`}
+      >
         <div className={styles.exploreContent}>
           <h2>Explore endless possibilities with Celeris</h2>
           <p>
             Discover the transformative potential of AI-driven insights in
             streamlining operations and revolutionizing your institution.
           </p>
-          <CelerisSecondaryBtn rounded>Request Demo</CelerisSecondaryBtn>
+          <CelerisSecondaryBtn rounded="true">Request Demo</CelerisSecondaryBtn>
         </div>
         <div>
           <img
@@ -181,7 +268,110 @@ export default function Landing() {
       </section>
 
       {/* Feedback section */}
-      <section className=""></section>
+      <section className={styles.feedback}>
+        <h2>What our users say?</h2>
+        <Slider {...settings}>
+          {sliderItems.map((item, index) => (
+            <div key={index} className={styles.sliderCard}>
+              <p>{item.comment}</p>
+              <div className={styles.info}>
+                <img src={item.icon} alt={item.name} />
+                <span className={styles.infoDetails}>
+                  <h4>{item.name}</h4>
+                  <p>
+                    {item.role},{item.company}
+                  </p>
+                </span>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </section>
+
+      {/* About Us Section */}
+      <section className={`container ${styles.aboutUS}`}>
+        <div className="d-flex flex-lg-row flex-column-reverse align-items-center justify-content-between">
+          <div className={styles.aboutContent}>
+            <h2>About Us</h2>
+            <div>
+              <span>
+                At Celeris, we're dedicated to driving innovation and empowering
+                lenders to thrive in the digital age.
+              </span>
+              <span>
+                Whether you're a traditional lender transitioning to digital or
+                an existing digital lender seeking to enhance decision-making
+                with data-driven precision, we're here to support you.
+              </span>
+              <span>
+                Our solutions blend cutting-edge technology with the convenience
+                of Software-as-a-Service, enabling lenders to take control of
+                data, make informed decisions, and achieve greater accuracy in
+                analytics.
+              </span>
+              <span>
+                With Celeris, you're not just adapting to change – you're
+                shaping the future of lending.
+              </span>
+            </div>
+          </div>
+          <div>
+            <img src={Imports.about} alt="" className={styles.aboutImg} />
+          </div>
+        </div>
+      </section>
+
+      {/* Connect with us section */}
+      <section className="container">
+        <div className={styles.connect}>
+          <img src={Imports.connect} alt="" />
+          <form className={styles.connectForm}>
+            <h3 className={styles.formHeading}>
+              Connect with us to schedule a platform demonstration and explore
+              potential collaboration opportunities. Complete the form provided,
+              and we'll reach out to you promptly.
+            </h3>
+            <div className={styles.formGroup}>
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                placeholder="Full name"
+                className="form-input"
+                id="name"
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="email">Business email</label>
+              <input
+                type="email"
+                className="form-input"
+                placeholder="myname@company.com"
+                id="email"
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="company">Company</label>
+              <input
+                type="text"
+                className="form-input"
+                id="company"
+                placeholder="Company Name"
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="message">
+                Please share anything that will help prepare for our meeting
+              </label>
+              <textarea name="message" id="message" cols={40}>
+                {' '}
+              </textarea>
+            </div>
+            <div className="d-flex align-items-center justify-content-center w-100">
+              <CelerisPrimaryBtn rounded="true">Submit</CelerisPrimaryBtn>
+            </div>
+          </form>
+        </div>
+      </section>
     </>
   );
 }

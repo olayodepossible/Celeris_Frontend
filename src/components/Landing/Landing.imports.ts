@@ -14,6 +14,8 @@ import lowfee from '../../assets/images/lowfee.png';
 import fast from '../../assets/images/fast.png';
 import encryption from '../../assets/images/encryption.png';
 import explore from '../../assets/images/explore.png';
+import about from '../../assets/images/about.svg';
+import connect from '../../assets/images/connect.png';
 
 export default {
   analysis,
@@ -32,4 +34,6 @@ export default {
   lowfee,
   fast,
   encryption,
+  about,
+  connect
 };

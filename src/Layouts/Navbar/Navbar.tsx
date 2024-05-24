@@ -110,7 +110,7 @@ export default function Navbar() {
                   </li>
                 </ul>
               </li>
-              <CelerisPrimaryBtn rounded>Request Demo</CelerisPrimaryBtn>
+              <CelerisPrimaryBtn rounded="true">Request Demo</CelerisPrimaryBtn>
             </ul>
           </div>
         </div>
