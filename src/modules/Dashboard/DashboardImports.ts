@@ -1,0 +1,186 @@
+import homelogo from '../../assets/logos/home.svg';
+import joblistlogo from '../../assets/logos/barchar.svg';
+import { IInputProps } from '../../shared/Filter/Filter';
+
+export const links = [
+  {
+    icon: homelogo,
+    name: 'Dashboard',
+    path: '/dashboard',
+  },
+  { icon: joblistlogo, name: 'Job Lists', path: '/jobList' },
+  { icon: joblistlogo, name: 'About', path: '/about' },
+  { icon: joblistlogo, name: 'Contact', path: '/contact' },
+];
+
+
+export const filterInputs = [
+  {
+    label: 'Product Type',
+    type: 'select',
+    value: ['Electronics', 'Books', 'Clothing'],
+  },
+  { label: 'Result Type', type: 'select', value: ['Apple', 'Samsung', 'Sony'] },
+  {
+    label: 'Period',
+    type: 'select',
+    value: ['Under $50', '$50 to $100', 'Above $100'],
+  },
+];
+export const formInputs: IInputProps[] = [
+  {
+    label: 'File Type',
+    placeholder: 'Select File Type',
+    type: 'select',
+    value: ['Electronics', 'Books', 'Clothing'],
+    isRequired: true,
+  },
+  {
+    label: 'Statement Type',
+    placeholder: 'Select Statement Type',
+    type: 'select',
+    value: ['Apple', 'Samsung', 'Sony'],
+    isRequired: true,
+  },
+  {
+    label: 'Bank Name',
+    placeholder: 'Select Bank',
+    type: 'select',
+    value: ['Under $50', '$50 to $100', 'Above $100'],
+    isRequired: true,
+  },
+  {
+    label: 'File Password (optional)',
+    placeholder: 'Enter File Password',
+    type: 'input',
+    value: [],
+  },
+];
+export const labels = [
+  'Jan 2024',
+  'Feb 2024',
+  'Mar 2024',
+  'Apr 2024',
+  'May 2024',
+  'Jun 2024',
+  'Jul 2024',
+  'Aug 2024',
+  'Sep 2024',
+];
+export const barChartoptions = {
+  elements: {
+    bar: {
+      borderWidth: 2,
+    },
+  },
+  responsive: true,
+  plugins: {
+    title: {
+      display: false,
+      text: 'Chart.js Horizontal Bar Chart',
+    },
+    label: {
+      display: false,
+      text: 'Chart.js Horizontal Bar Chart',
+    },
+    legend: {
+      display: false,
+      position: 'right' as const,
+    },
+  },
+};
+export const barChartData = {
+  labels,
+  datasets: [
+    {
+      label: 'dataset 1',
+      data: [900, 1150, 650, 900, 1150, 650, 900, 1150, 650],
+      borderColor: '#207edf',
+      backgroundColor: '#207edf',
+    },
+  ],
+  scales: {
+    ticks: {
+      min: 0,
+      max: 1200,
+      stepSize: 200,
+    },
+  },
+};
+
+export const doughChartoptions = {
+  cutout: '85%',
+  rotation: -25,
+  responsive: true,
+  plugins: {
+    title: {
+      display: false,
+    },
+    legend: {
+      display: true,
+      position: 'right' as const,
+    },
+  },
+};
+
+export const doughChartData = {
+  labels: ['Successful:510', 'Processing Error:510'],
+  datasets: [
+    {
+      label: 'dataset 1',
+      data: [510, 510],
+      backgroundColor: ['#3EA986', '#C4C4C4'],
+      borderWidth: 2,
+      weight: 2,
+    },
+  ],
+};
+
+export const pendingDoughChartoptions = {
+  cutout: '85%',
+  rotation: 160,
+  responsive: true,
+  plugins: {
+    title: {
+      display: false,
+    },
+    legend: {
+      display: true,
+      position: 'right' as const,
+    },
+  },
+};
+
+export const pendingDoughChartData = {
+  labels: ['Altered: 250', 'Failed: 250', 'Timeout: 0'],
+  datasets: [
+    {
+      label: 'dataset 1',
+      data: [250, 250, 0],
+      backgroundColor: ['#F577DA', '#B60A0A', '#0A5F8E'],
+      borderWidth: 2,
+      weight: 2,
+    },
+  ],
+};
+export const drawPercentagePlugin = {
+  id: 'drawPercentage',
+  beforeDraw: (chart: any) => {
+    const { ctx, data } = chart;
+    const total = data.datasets[0].data.reduce(
+      (acc: any, value: any) => acc + value,
+      0,
+    );
+    const percentage = Math.round((data.datasets[0].data[0] / total) * 100);
+
+    ctx.save();
+    const xCenter = chart.getDatasetMeta(0).data[0].x;
+    const yCenter = chart.getDatasetMeta(0).data[0].y;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.font = '24px Arial';
+    ctx.fillStyle = '#000';
+    ctx.fillText(`${percentage}%`, xCenter, yCenter);
+    ctx.restore();
+  },
+};

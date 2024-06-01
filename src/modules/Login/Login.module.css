@@ -1,0 +1,82 @@
+.login {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #207EDF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    width: 100%;
+    max-width: 582px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #00000033
+}
+
+.loginFormContainer>h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.6px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.loginFormContainer>p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.loginForm,
+.formGroup {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    margin-bottom: 15px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    text-align: left;
+}
+
+.formGroup input {
+    width: 100%;
+    border: 1px solid #C4C4C4;
+    padding: 14px 20px;
+    border-radius: 20px;
+}
+
+.formGroup input::placeholder {
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    text-align: left;
+    color: #C4C4C4;
+}
+
+.forgotPassword {
+    display: block;
+    width: 100%;
+    color: #207EDF;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    text-align: center;
+}
