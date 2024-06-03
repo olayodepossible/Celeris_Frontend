@@ -12,7 +12,6 @@ import {
   doughChartoptions,
   filterInputs,
   formInputs,
-  links,
   pendingDoughChartData,
   pendingDoughChartoptions,
 } from './DashboardImports';
@@ -44,7 +43,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <Sidebar links={links}>
+      <Sidebar>
         <div className="content">
           <h2 className="header">Hi, Admin Name,</h2>
           <div className="filters d-flex justify-content-center">
@@ -55,7 +54,7 @@ const Dashboard = () => {
               onApplyFilters={handleApplyFilters}
             />
           </div>
-          <div className="d-flex justify-content-evenly flex-md-row flex-sm-column-reverse">
+          <div className="d-flex justify-content-evenly flex-lg-row flex-column-reverse">
             <div className="charts d-flex justify-content-start flex-column col-8">
               <div className="barchart">
                 <h2 className="header">Job Overview</h2>
@@ -68,7 +67,7 @@ const Dashboard = () => {
                   options={barChartoptions}
                 />
               </div>
-              <div className=" d-flex justify-content-between">
+              <div className="d-flex flex-lg-row flex-column justify-content-between">
                 <div className="doughnut">
                   <p className="title">Success Rate</p>
                   <Charts
@@ -87,7 +86,7 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="d-flex justify-content-between flex-lg-column">
+            <div className="d-flex justify-content-between flex-column">
               <div className="walletbalance">
                 <p className="title">Wallet Balance</p>
                 <h2 className="balance">100,500.00</h2>
@@ -128,11 +127,13 @@ const Dashboard = () => {
             onRequestClose={() => setModalOpen(false)}
           >
             <form className="analysisForm">
-              <div className="header d-flex justify-content-between w-100">
-                <h2 className="title">Analyze Bank Statement</h2>
+              <div className="header w-100">
+                <h2 className="title d-flex justify-content-between w-100">Analyze Bank Statement
                 <span className="close" onClick={() => setModalOpen(false)}>
                   X
                 </span>
+                </h2>
+                
               </div>
               <Filter
                 isFilter={false}
@@ -142,9 +143,8 @@ const Dashboard = () => {
               <div>
                 <DragNDrop onDrop={handleDragNDrop} />
               </div>
-              {/* {!files.length && <DragNDrop onDrop={handleDragNDrop} />} */}
               <div>
-                {files.length &&
+                {files &&
                   files.map((file: any, idx: any) => (
                     <div key={idx} className="file">
                       <span>{file.name}</span>

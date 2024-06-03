@@ -1,13 +1,20 @@
 import React from 'react';
 
-interface IPaginationProps{ pageIndex:number, pageCount:number, gotoPage:(page:string|number)=>void }
+interface IPaginationProps {
+  pageIndex: number;
+  pageCount: number;
+  gotoPage: (page: string | number) => void;
+}
 
-const Pagination = ({ pageIndex, pageCount, gotoPage }:IPaginationProps) => {
+const Pagination = ({ pageIndex, pageCount, gotoPage }: IPaginationProps) => {
   const maxPageNumbersToShow = 5;
 
   const getPageNumbers = () => {
     const pages = [];
-    const startPage = Math.max(1, pageIndex + 1 - Math.floor(maxPageNumbersToShow / 2));
+    const startPage = Math.max(
+      1,
+      pageIndex + 1 - Math.floor(maxPageNumbersToShow / 2),
+    );
     const endPage = Math.min(pageCount, startPage + maxPageNumbersToShow - 1);
 
     for (let i = startPage; i <= endPage; i++) {
@@ -19,7 +26,7 @@ const Pagination = ({ pageIndex, pageCount, gotoPage }:IPaginationProps) => {
     return pages;
   };
 
-  const handlePageClick = (page:string|number) => {
+  const handlePageClick = (page: string | number) => {
     if (typeof page === 'number') {
       gotoPage(page - 1);
     }
@@ -30,7 +37,10 @@ const Pagination = ({ pageIndex, pageCount, gotoPage }:IPaginationProps) => {
       <button onClick={() => gotoPage(0)} disabled={pageIndex === 0}>
         First
       </button>
-      <button onClick={() => gotoPage(pageIndex - 1)} disabled={pageIndex === 0}>
+      <button
+        onClick={() => gotoPage(pageIndex - 1)}
+        disabled={pageIndex === 0}
+      >
         Previous
       </button>
       {getPageNumbers().map((page, index) => (
@@ -42,10 +52,16 @@ const Pagination = ({ pageIndex, pageCount, gotoPage }:IPaginationProps) => {
           {page}
         </button>
       ))}
-      <button onClick={() => gotoPage(pageIndex + 1)} disabled={pageIndex === pageCount - 1}>
+      <button
+        onClick={() => gotoPage(pageIndex + 1)}
+        disabled={pageIndex === pageCount - 1}
+      >
         Next
       </button>
-      <button onClick={() => gotoPage(pageCount - 1)} disabled={pageIndex === pageCount - 1}>
+      <button
+        onClick={() => gotoPage(pageCount - 1)}
+        disabled={pageIndex === pageCount - 1}
+      >
         Last
       </button>
     </div>

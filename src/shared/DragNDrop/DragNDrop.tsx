@@ -6,7 +6,7 @@ interface IDragNDrop {
   onDrop: (files: any) => void;
 }
 
-export default function DragNDrop({onDrop}:IDragNDrop) {
+export default function DragNDrop({ onDrop }: IDragNDrop) {
   const [dragActive, setDragActive] = useState<boolean>(false);
   const inputRef = useRef<any>(null);
   const [files, setFiles] = useState<any>([]);
@@ -19,10 +19,10 @@ export default function DragNDrop({onDrop}:IDragNDrop) {
       for (let i = 0; i < e.target.files['length']; i++) {
         setFiles((prevState: any) => [...prevState, e.target.files[i]]);
       }
-      onDrop(e.target.files[0])
+      onDrop(e.target.files[0]);
     }
   }
-  
+
   function handleDrop(e: any) {
     e.preventDefault();
     e.stopPropagation();
@@ -31,7 +31,7 @@ export default function DragNDrop({onDrop}:IDragNDrop) {
       for (let i = 0; i < e.dataTransfer.files['length']; i++) {
         setFiles((prevState: any) => [...prevState, e.dataTransfer.files[i]]);
       }
-      onDrop(e.target.files[0])
+      onDrop(e.target.files[0]);
     }
   }
 
@@ -57,7 +57,6 @@ export default function DragNDrop({onDrop}:IDragNDrop) {
     inputRef.current.value = '';
     inputRef.current.click();
   }
-
 
   return (
     <div className="dragndrop">

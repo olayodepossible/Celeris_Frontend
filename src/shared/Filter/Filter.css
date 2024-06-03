@@ -36,3 +36,8 @@
     text-align: left;
     color:#00000080;
 }
+@media (max-width: 767px) {
+    .filterOption {
+        flex-direction: column;
+    }
+}

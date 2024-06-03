@@ -77,7 +77,7 @@ const Filter = ({
         <CelerisPrimaryBtn
           width={button?.width ? button?.width : ''}
           onClick={handleApplyFilters}
-          padding="8px 25px"
+          padding="8px 15px"
         >
           {button ? button.text : 'Apply Filters'}
         </CelerisPrimaryBtn>
@@ -97,7 +97,10 @@ const Filter = ({
                 </label>
                 <select
                   required={input.isRequired}
-                  onChange={(e) => {handleChange(input.label, e.target.value);handleApplyFilters }}
+                  onChange={(e) => {
+                    handleChange(input.label, e.target.value);
+                    handleApplyFilters;
+                  }}
                   value={selectedOptions[input.label] || ''}
                 >
                   <option value="">{input.label}</option>
@@ -110,7 +113,7 @@ const Filter = ({
               </div>
             </div>
           ) : (
-            <div className="form-group">
+            <div className="form-group" key={input.label}>
               <label htmlFor={input.label}>
                 {input.label}{' '}
                 {input.isRequired ? <span className="star">*</span> : ''}
@@ -119,7 +122,10 @@ const Filter = ({
                 type={input.type}
                 name={input.type}
                 id={input.type}
-                onChange={(e) => {handleChange(input.label, e.target.value);handleApplyFilters }}
+                onChange={(e) => {
+                  handleChange(input.label, e.target.value);
+                  handleApplyFilters;
+                }}
                 placeholder={input.placeholder}
                 required={input.isRequired}
               />

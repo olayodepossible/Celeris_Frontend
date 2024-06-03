@@ -2,17 +2,6 @@ import homelogo from '../../assets/logos/home.svg';
 import joblistlogo from '../../assets/logos/barchar.svg';
 import { IInputProps } from '../../shared/Filter/Filter';
 
-export const links = [
-  {
-    icon: homelogo,
-    name: 'Dashboard',
-    path: '/dashboard',
-  },
-  { icon: joblistlogo, name: 'Job Lists', path: '/jobList' },
-  { icon: joblistlogo, name: 'About', path: '/about' },
-  { icon: joblistlogo, name: 'Contact', path: '/contact' },
-];
-
 
 export const filterInputs = [
   {

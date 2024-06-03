@@ -112,7 +112,9 @@ export default function Navbar() {
                 </ul>
               </li>
               <Link to="login">
-              <CelerisPrimaryBtn rounded="true">Request Demo</CelerisPrimaryBtn>
+                <CelerisPrimaryBtn rounded="true">
+                  Request Demo
+                </CelerisPrimaryBtn>
               </Link>
             </ul>
           </div>

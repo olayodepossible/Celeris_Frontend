@@ -11,6 +11,7 @@ import Main from './Layouts';
 import Landing from './modules/Landing/Landing';
 import Login from './modules/Login/Login';
 import Dashboard from './modules/Dashboard/Dashboard';
+import DashboardDetail from './modules/Dashboardcopy/DashboardDetail'
 import JobList from './modules/JobList/JobList';
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
       />
       <Route path="login" element={<Login />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/creditSearch" element={<DashboardDetail />} />
       <Route path="/joblist" element={<JobList />} />
       <Route path="*" element={<div>Error</div>} />
     </Routes>

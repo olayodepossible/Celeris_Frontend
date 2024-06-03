@@ -5,6 +5,7 @@
   justify-content: space-between;
 }
 
+
 .titleBlockContainer {
   width: 20%;
   position: fixed;
@@ -18,6 +19,14 @@
   border: 1px solid;
   padding: 25px;
   border-image-source: linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, #E0E1E2 49.52%, rgba(224, 225, 226, 0.15625) 99.04%);
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar.open {
+  transform: translateX(0);
 }
 
 .title {
@@ -49,6 +58,7 @@
   position: absolute;
   right: 0;
   width: 78%;
+  padding-top: 41px;
 }
 
 .crumbs li {
@@ -61,67 +71,71 @@
   padding: 0;
 }
 
-.navList a {
+.navList > li {
+  width: 100%;
+}
+.navList li:first-child {
+  padding-left: 10px;
+}
+
+.navList li a:hover{
+  background: #1A1F37;
+}
+
+.navList>li>a {
+  border-radius: 15px;
   width: 100%;
   padding: 8px 16px;
-  border-radius: 15px;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #fff;
-}
-
-.navList a:hover,
-.navList a.active {
-  background: #1A1F37;
-}
-
-.navList>a>li {
-  width: 100%;
-  display: flex;
-  align-items: center;
   font-family: "Poppins";
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
   gap: 15px;
 }
-
-.navList>a>li img {
-  background: #1A1F37;
-  padding: 10px 8px;
-  border-radius: 50px;
+.active {
+  background: #1A1F37 !important;
 }
 
 .burger {
-  display: none;
-  background: transparent;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
   cursor: pointer;
-  border: 0;
-  z-index: 20;
+  z-index: 1001;
 }
 
 .burgerLine {
-  display: block;
-  margin-bottom: 5px;
-  position: absolute;
-  width: 30px;
+  width: 25px;
   height: 5px;
+  margin: 1px 0;
   background-color: #5d5dfd;
 }
 
 @media screen and (max-width: 991px) {
   .burger {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 10px;
   }
 }
 
 @media (max-width: 767px) {
   .titleBlockContainer {
-    height: 60px;
+    width: fit-content;
+    min-height: 100vh;
+    z-index: 5;
   }
 
-  .crumbs {
-    display: none;
-  }
 }

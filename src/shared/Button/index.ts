@@ -4,9 +4,9 @@ interface ButtonProps {
   padding?: string;
   width?: string;
   font?: {
-    f:string,
-    s:string,
-    w:number,
+    f: string;
+    s: string;
+    w: number;
   };
 }
 export const CelerisPrimaryBtn = styled.button<ButtonProps>`
@@ -15,10 +15,10 @@ export const CelerisPrimaryBtn = styled.button<ButtonProps>`
   color: #fff;
   border: none;
   padding: ${(props) =>
-    props.rounded === 'true' ? '27px 32px' : (props.padding || "10px")};
+    props.rounded === 'true' ? '27px 32px' : props.padding || '10px'};
   width: ${(props) => (props.width ? props.width : 'fit-content')};
   font-family: ${(props) => (props.font?.f ? props.font?.f : 'DM Sans')};
-  font-size: ${(props) => (props.font?.s ? props.font?.s+"px" : "16px")};
+  font-size: ${(props) => (props.font?.s ? props.font?.s + 'px' : '16px')};
   font-weight: ${(props) => (props.font?.w ? props.font?.w : 700)};
   line-height: 16px;
   letter-spacing: 1.600000023841858px;
@@ -27,6 +27,10 @@ export const CelerisPrimaryBtn = styled.button<ButtonProps>`
 export const CelerisSecondaryBtn = styled(CelerisPrimaryBtn)`
   color: #207edf;
   background-color: #fff;
+`;
+export const CelerisDarkBtn = styled(CelerisPrimaryBtn)`
+  color: white;
+  background-color: #060B26;
 `;
 
 export const CelerisPrimarySubmitBtn = styled(CelerisPrimaryBtn).attrs({

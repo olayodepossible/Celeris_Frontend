@@ -10,20 +10,21 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import './Table.css';
-
+import { Pagination, Stack } from '@mui/material';
 interface TableProps {
   columns: any[];
-  // columns: ColumnDef<any>[];
   data: any[];
-  // withPagination?: boolean;
+  withPagination?: boolean;
+  variant?: "outlined" | "normal"
 }
 
-const TableComponent = ({ columns, data }: TableProps) => {
+const TableComponent = ({ columns, data, withPagination,variant }: TableProps) => {
   const [pagination, setPagination] = React.useState<PaginationState>({
     pageIndex: 0,
     pageSize: 10,
   });
   // const [data, setData] = React.useState()
+  const pageNumbers: any[] = [];
   const memoColumn = useMemo(() => columns, []);
   const memoData = useMemo(() => data, []);
   const table = useReactTable({
@@ -38,6 +39,13 @@ const TableComponent = ({ columns, data }: TableProps) => {
       pagination,
     },
   });
+  (() => {
+    const pageCount = table.getPageCount();
+    for (let i = 0; i < pageCount; i++) {
+      pageNumbers.push(i);
+    }
+    return pageNumbers;
+  })();
   return (
     <>
       <table>
@@ -59,7 +67,7 @@ const TableComponent = ({ columns, data }: TableProps) => {
         </thead>
         <tbody>
           {table.getRowModel().rows.map((row) => (
-            <tr key={row.id}>
+            <tr key={row.id} className={variant}>
               {row.getVisibleCells().map((cell) => (
                 <td key={cell.id}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -69,72 +77,28 @@ const TableComponent = ({ columns, data }: TableProps) => {
           ))}
         </tbody>
       </table>
-      {/* <div className="flex items-center gap-2">
-        <button
-          className="border rounded p-1"
-          onClick={() => table.firstPage()}
-          disabled={!table.getCanPreviousPage()}
-        >
-          {'<<'}
-        </button>
-        <button
-          className="border rounded p-1"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-        >
-          {'<'}
-        </button>
-        <button
-          className="border rounded p-1"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-        >
-          {'>'}
-        </button>
-        <button
-          className="border rounded p-1"
-          onClick={() => table.lastPage()}
-          disabled={!table.getCanNextPage()}
-        >
-          {'>>'}
-        </button>
-        <span className="flex items-center gap-1">
-          <div>Page</div>
-          <strong>
-            {table.getState().pagination.pageIndex + 1} of{' '}
-            {table.getPageCount().toLocaleString()}
-          </strong>
-          {table.getState().pagination.pageIndex}
-        </span>
-        <span className="flex items-center gap-1">
-          | Go to page:
-          <input
-            type="number"
-            defaultValue={table.getState().pagination.pageIndex + 1}
-            onChange={(e) => {
-              const page = e.target.value ? Number(e.target.value) - 1 : 0;
-              table.setPageIndex(page);
-            }}
-            className="border p-1 rounded w-16"
-          />
-        </span>
-        <select
-          value={table.getState().pagination.pageSize}
-          onChange={(e) => {
-            table.setPageSize(Number(e.target.value));
-          }}
-        >
-          {[10, 20, 30, 40, 50].map((pageSize) => (
-            <option key={pageSize} value={pageSize}>
-              Show {pageSize}
-            </option>
-          ))}
-        </select>
-      </div> */}
-      {/* <div>
-        Showing {table.getRowModel().rows.length.toLocaleString()} of{' '}
-        {table.getRowCount().toLocaleString()} Rows
-      </div> */}
+      {withPagination && (
+        <div className="d-flex justify-content-between w-75 pagination">
+          <div>
+            Showing {table.getRowModel().rows.length.toLocaleString()} of{' '}
+            {table.getRowCount().toLocaleString()} Rows
+          </div>
+          <div>
+            <Stack spacing={2} justifySelf={'center'} alignSelf={'center'}>
+              <Pagination
+                count={pageNumbers.length}
+                onChange={(event, page) => {
+                  table.setPageIndex(page - 1);
+                  console.log(event, page);
+                }}
+                hidePrevButton
+                hideNextButton
+                color="primary"
+              />
+            </Stack>
+          </div>
+        </div>
+      )}
     </>
   );
 };
