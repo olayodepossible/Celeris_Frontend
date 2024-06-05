@@ -1,9 +1,9 @@
-import { axiosInstance } from "../axiosInstance"
+import { axiosInstance } from '../axiosInstance';
 
-export const getCharts = () =>{
-    return axiosInstance.get('/chart')
-}
+export const getCharts = () => {
+  return axiosInstance.get('/chart');
+};
 
-export const getTableData = () =>{
-    return axiosInstance.get('/monthmetrics')
-}
+export const getTableData = () => {
+  return axiosInstance.get('/monthmetrics');
+};

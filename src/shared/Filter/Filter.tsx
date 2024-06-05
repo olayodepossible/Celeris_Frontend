@@ -19,7 +19,7 @@ interface IFilterProps {
   styles: string;
   isFilter?: boolean | true;
   onApplyFilters?: (selectedFilters: { [key: string]: string }) => void;
-  onFormValidityChange?: (isValid: boolean) => void; 
+  onFormValidityChange?: (isValid: boolean) => void;
 }
 
 const Filter = ({
@@ -51,7 +51,8 @@ const Filter = ({
   useEffect(() => {
     // Check if all required fields are filled
     const isValid = inputs.every(
-      (input) => !input.isRequired || (input.isRequired && selectedOptions[input.label])
+      (input) =>
+        !input.isRequired || (input.isRequired && selectedOptions[input.label]),
     );
     setIsFormValid(isValid);
     if (onFormValidityChange) {
@@ -93,7 +94,7 @@ const Filter = ({
           width={button?.width ? button?.width : ''}
           onClick={handleApplyFilters}
           padding="8px 15px"
-          disabled={!isFormValid} 
+          disabled={!isFormValid}
         >
           {button ? button.text : 'Apply Filters'}
         </CelerisPrimaryBtn>

@@ -12,7 +12,6 @@ import CreditRegistry from './CreditRegistry/CreditRegistry';
 import FirstCentral from './FirstCentral/FirstCentral';
 import './DecisionEngine.css';
 
-
 const DecisionEngine = () => {
   const [value, setValue] = React.useState('1');
 
@@ -47,12 +46,14 @@ const DecisionEngine = () => {
           <Summary />
         </TabPanel>
         <TabPanel value="2">
-          <CreditRegistry/>
+          <CreditRegistry />
         </TabPanel>
         <TabPanel value="3">
           <CRC />
         </TabPanel>
-        <TabPanel value="4"><FirstCentral/></TabPanel>
+        <TabPanel value="4">
+          <FirstCentral />
+        </TabPanel>
       </TabContext>
     </Sidebar>
   );

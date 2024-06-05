@@ -3,14 +3,13 @@ import InfoCard, { IInfo } from '../../../shared/Card/InfoCard/InfoCard';
 import Charts, { ChartType } from '../../../shared/Charts/Charts';
 import {
   barChartData,
-  barChartoptions,
   lineChartData,
   lineChartoptions,
 } from './SummaryImports';
 import useChartQuery from '../../../utils/customHooks/UseChartQuery';
 
 const Summary = () => {
-  const [isLoading, labels, datas, isError, error] = useChartQuery();
+  const { labels, datas } = useChartQuery();
 
   // remove this dummy data start
   const now = new Date();
@@ -62,23 +61,6 @@ const Summary = () => {
       color: '#078431',
     },
   ];
-  const infos1: IInfo[] = [
-    {
-      title: 'Opening Balance',
-      amount: '200,000.00',
-      color: '1,205,867.621',
-    },
-    {
-      title: 'Closing Balance',
-      amount: '1,205,867.621',
-      color: '#F84444',
-    },
-    {
-      title: 'Number of Transactions',
-      amount: '507',
-      color: '#C607E5',
-    },
-  ];
 
   return (
     <>
@@ -116,7 +98,7 @@ const Summary = () => {
                 </div>
                 <div>
                   <p>Address</p>
-                  <h5>32 IDAK UKIM STREET Uyo 003 State</h5>
+                  <h5>32 IDAK UKIM STREET Uyo 003 State</h5>
                 </div>
               </div>
               <div className="cardContent">
@@ -174,7 +156,7 @@ const Summary = () => {
           </div>
         </div>
       </div>
-      <div className='mb-3'>
+      <div className="mb-3">
         <div className="d-flex flex-lg-row flex-column justify-content-between w-100">
           <div className="linechart">
             <h2 className="chartTitle">Monthly Loan Disbursement </h2>
@@ -207,7 +189,9 @@ const Summary = () => {
       </div>
       <div className="info">
         <InfoCard infos={infos} />
-        <h3>Number of Salary Payments: <b>23</b></h3>
+        <h3>
+          Number of Salary Payments: <b>23</b>
+        </h3>
       </div>
     </>
   );

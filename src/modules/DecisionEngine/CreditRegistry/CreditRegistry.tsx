@@ -304,10 +304,9 @@ const CashFlow = () => {
               <h3 className="title">Contact Phone</h3>
               <p className="amount">2349076353566</p>
             </div>
-           
           </div>
         </div>
-        
+
         <div className="d-flex align-items-center">
           <p className="me-4">2.</p>
           <div className="content">
@@ -327,10 +326,9 @@ const CashFlow = () => {
               <h3 className="title">Contact Phone</h3>
               <p className="amount">2349076353566</p>
             </div>
-           
           </div>
         </div>
-        
+
         <div className="d-flex align-items-center">
           <p className="me-4">3.</p>
           <div className="content">
@@ -350,10 +348,9 @@ const CashFlow = () => {
               <h3 className="title">Contact Phone</h3>
               <p className="amount">2349076353566</p>
             </div>
-           
           </div>
         </div>
-        
+
         <div className="d-flex align-items-center">
           <p className="me-4">4.</p>
           <div className="content">
@@ -373,10 +370,9 @@ const CashFlow = () => {
               <h3 className="title">Contact Phone</h3>
               <p className="amount">2349076353566</p>
             </div>
-           
           </div>
         </div>
-        
+
         <div className="d-flex align-items-center">
           <p className="me-4">5.</p>
           <div className="content border-0">
@@ -396,10 +392,8 @@ const CashFlow = () => {
               <h3 className="title">Contact Phone</h3>
               <p className="amount">2349076353566</p>
             </div>
-           
           </div>
         </div>
-        
       </AccountDetailsLayout>
     </>
   );

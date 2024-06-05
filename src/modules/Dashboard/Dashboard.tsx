@@ -35,7 +35,7 @@ const Dashboard = () => {
     setFilters(selectedFilters);
     console.log('Applied Filters:', selectedFilters, filters);
   };
-  const [isLoading, labels, datas, isError, error] = useChartQuery();
+  const { isLoading, labels, datas, isError } = useChartQuery();
   function removeFile(fileName: any, idx: any) {
     const newArr = [...files];
     newArr.splice(idx, 1);
@@ -68,7 +68,9 @@ const Dashboard = () => {
                 <p className="title">
                   Total Job Volume: <span>1,075</span>
                 </p>
-                {isLoading === true && <div className='text-center fs-1 text-bold'>Loading.....</div>}
+                {isLoading === true && (
+                  <div className="text-center fs-1 text-bold">Loading.....</div>
+                )}
                 {isLoading === false && !isError && (
                   <Charts
                     type={ChartType.Bar}
@@ -165,7 +167,7 @@ const Dashboard = () => {
                 isFilter={false}
                 inputs={analysisformInputs}
                 onApplyFilters={handleApplyFilters}
-                onFormValidityChange={handleFormValidityChange} 
+                onFormValidityChange={handleFormValidityChange}
                 styles="d-flex flex-column justify-content-center align-items-center"
               />
               <div>
@@ -196,7 +198,11 @@ const Dashboard = () => {
                     </div>
                   ))}
               </div>
-              <CelerisPrimaryBtn disabled={!isFormValid} width="100%" padding="11px">
+              <CelerisPrimaryBtn
+                disabled={!isFormValid}
+                width="100%"
+                padding="11px"
+              >
                 Analyze Bank Statement
               </CelerisPrimaryBtn>
             </form>
@@ -235,10 +241,14 @@ const Dashboard = () => {
                 isFilter={false}
                 inputs={creditReportformInputs}
                 onApplyFilters={handleApplyFilters}
-                onFormValidityChange={handleFormValidityChange} 
+                onFormValidityChange={handleFormValidityChange}
                 styles="d-flex flex-column justify-content-center align-items-center"
               />
-              <CelerisPrimaryBtn disabled={!isFormValid} width="100%" padding="11px">
+              <CelerisPrimaryBtn
+                disabled={!isFormValid}
+                width="100%"
+                padding="11px"
+              >
                 Analyze Bank Statement
               </CelerisPrimaryBtn>
             </form>

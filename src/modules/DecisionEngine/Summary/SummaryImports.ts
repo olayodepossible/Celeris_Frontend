@@ -6,9 +6,7 @@ const formatNumber = (num: number): string => {
   }
   return num.toString();
 };
-export const labels = [
-
-];
+export const labels = [];
 
 export const barChartoptions = {
   elements: {
@@ -130,6 +128,7 @@ export const lineChartData = {
         gradientBg.addColorStop(0, bgColor[0]);
         gradientBg.addColorStop(0.2, bgColor[0]);
         gradientBg.addColorStop(1, bgColor[1]);
+        console.log(data);
         return gradientBg;
       },
       pointBackgroundColor: 'transparent',
@@ -140,4 +139,3 @@ export const lineChartData = {
     },
   ],
 };
-

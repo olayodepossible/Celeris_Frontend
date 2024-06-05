@@ -46,12 +46,14 @@ const DashboardDetail = () => {
           <Summary />
         </TabPanel>
         <TabPanel value="2">
-          <CashFlow/>
+          <CashFlow />
         </TabPanel>
         <TabPanel value="3">
           <Behavioral />
         </TabPanel>
-        <TabPanel value="4"><Transactions/></TabPanel>
+        <TabPanel value="4">
+          <Transactions />
+        </TabPanel>
       </TabContext>
     </Sidebar>
   );

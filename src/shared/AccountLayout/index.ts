@@ -37,7 +37,7 @@ export const AccountLayout = styled.div<ButtonProps>`
     padding: 40px 0;
     align-items: center;
     gap: 12px;
-    
+
     .title {
       font-size: 12px;
       font-weight: 700;
@@ -53,10 +53,10 @@ export const AccountLayout = styled.div<ButtonProps>`
       text-align: center;
     }
   }
-  `;
+`;
 export const AccountDetailsLayout = styled(AccountLayout)`
-.content{
-  width: 100%;
+  .content {
+    width: 100%;
     border-bottom: 1px solid #00000033;
     gap: 20px;
     /* div{
@@ -65,16 +65,15 @@ export const AccountDetailsLayout = styled(AccountLayout)`
     .amount {
       text-align: left;
     }
-  }`
-
+  }
+`;
 
 export const InquiryHistoryLayout = styled(AccountLayout)`
-.content{
-  border-bottom: 1px solid #00000033;
-  gap: 12px;
+  .content {
+    border-bottom: 1px solid #00000033;
+    gap: 12px;
     .amount {
-        text-align: left;
+      text-align: left;
     }
-}
-
-`
+  }
+`;

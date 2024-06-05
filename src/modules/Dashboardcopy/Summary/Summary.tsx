@@ -10,7 +10,7 @@ import {
 import useChartQuery from '../../../utils/customHooks/UseChartQuery';
 
 const Summary = () => {
-  const [isLoading, labels, datas, isError, error] = useChartQuery();
+  const { labels, datas } = useChartQuery();
 
   const infos: IInfo[] = [
     {

@@ -1,6 +1,5 @@
 import { IInputProps } from '../../shared/Filter/Filter';
 
-
 export const filterInputs = [
   {
     label: 'Product Type',
@@ -44,12 +43,12 @@ export const analysisformInputs: IInputProps[] = [
   },
 ];
 export const creditReportformInputs: IInputProps[] = [
-    {
+  {
     label: 'Bank Verification Number',
     placeholder: 'Enter BVN',
     type: 'input',
     value: [],
-    isRequired:true
+    isRequired: true,
   },
   {
     label: 'Report Period (optional)',
@@ -81,7 +80,7 @@ export const barChartoptions = {
   },
 };
 export const barChartData = {
-  labels:[],
+  labels: [],
   datasets: [
     {
       label: 'dataset 1',

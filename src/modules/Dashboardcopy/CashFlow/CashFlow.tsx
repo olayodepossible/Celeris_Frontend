@@ -1,10 +1,10 @@
 import Table from '../../../shared/Table/Table';
 import { columns } from './CashFlowImports';
 import useTableQuery from '../../../utils/customHooks/UseTableQuery';
-import './CashFlow.css'
+import './CashFlow.css';
 
 const CashFlow = () => {
-  const [isLoading, data, isError, error] = useTableQuery();
+  const [isLoading, data] = useTableQuery();
   if (isLoading) {
     return <>Loading...</>;
   }

@@ -11,15 +11,12 @@ import Filter from '../../shared/Filter/Filter';
 import { CelerisDarkBtn } from '../../shared/Button';
 import './JobList.css';
 
-
-
 const JobList = () => {
   const [value, setValue] = React.useState('1');
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
-
 
   return (
     <Sidebar>

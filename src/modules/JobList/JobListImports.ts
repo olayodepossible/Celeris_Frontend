@@ -1,5 +1,5 @@
-import { ColumnDef } from "@tanstack/react-table";
-import fileUploads from '../../services/fileuploads.json'
+import { ColumnDef } from '@tanstack/react-table';
+import fileUploads from '../../services/fileuploads.json';
 export type Person = {
   name: string;
   age: number;
@@ -26,34 +26,34 @@ export const filterInputs = [
 ];
 export const columns: ColumnDef<any>[] = [
   {
-    header: ()=>'#',
+    header: () => '#',
     accessorKey: 'id',
   },
   {
-    header: ()=>'Analysis ID',
+    header: () => 'Analysis ID',
     accessorKey: 'analysis id',
   },
   {
-    header: ()=>'File Name',
+    header: () => 'File Name',
     accessorKey: 'file name',
   },
   {
-    header: ()=>'Status',
+    header: () => 'Status',
     accessorKey: 'status',
-    cell: value => value.getValue()
+    cell: (value) => value.getValue(),
   },
   {
-    header: ()=>'File Type',
+    header: () => 'File Type',
     accessorKey: 'file type',
   },
   {
-    header: ()=>'Creation Date',
+    header: () => 'Creation Date',
     accessorKey: 'creation date',
   },
   {
-    header: ()=>'Uploaded By',
+    header: () => 'Uploaded By',
     accessorKey: 'uploaded by',
   },
 ];
 
-export const data = fileUploads
+export const data = fileUploads;

@@ -11,7 +11,11 @@ interface UseFormValidationProps {
   onSubmit: (values: FormValues) => void;
 }
 
-const useFormValidation = ({ initialValues, validationSchema, onSubmit }: UseFormValidationProps) => {
+const useFormValidation = ({
+  initialValues,
+  validationSchema,
+  onSubmit,
+}: UseFormValidationProps) => {
   const formik = useFormik({
     initialValues,
     validationSchema,
