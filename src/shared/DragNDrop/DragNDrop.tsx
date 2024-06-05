@@ -61,8 +61,8 @@ export default function DragNDrop({ onDrop }: IDragNDrop) {
   return (
     <div className="dragndrop">
       <img src={uploadLogo} alt="" />
-      <form
-        className={`${
+      <div
+        className={`form ${
           dragActive ? 'bg-blue-400' : 'bg-blue-100'
         }  p-4 w-1/3 rounded-lg  min-h-[10rem] text-center flex flex-col items-center justify-center`}
         onDragEnter={handleDragEnter}
@@ -91,7 +91,7 @@ export default function DragNDrop({ onDrop }: IDragNDrop) {
           </span>
         </p>
         <h4>Supported formats: PDF, XLSX, CSV, PY, JSON Max. Size (10MB)</h4>
-      </form>
+      </div>
     </div>
   );
 }

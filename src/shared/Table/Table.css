@@ -8,14 +8,12 @@ table th {
   padding: 8px;
 }
 
-table tbody tr {
-  padding: 20px;
+table tbody td {
+  padding: 17px;
   font-family: "Poppins";
   font-size: 13px;
   font-weight: 400;
   line-height: 18.2px;
-  text-align: left;
-
 }
 
 table tr:nth-child(even) {
@@ -58,4 +56,50 @@ table th:last-child {
   font-size: 13px;
   font-weight: 500;
   line-height: 18.2px;
+}
+
+.parsed,
+.altered,
+.Altered,
+.Failed,
+.Parsed,
+.failed {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18.2px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.Parsed,
+.Credit,
+.credit,
+.parsed {
+  color: #078431;
+  background: #BAFCD0;
+
+}
+
+.Altered,
+.altered {
+  color: #890DB5;
+  background: #F9E2F8;
+}
+
+.Debit,
+.debit,
+.Failed,
+.failed {
+  color: #BF0707;
+  background: #F6DEDE;
+}
+
+.nodata {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 200px;
+  text-align: center;
 }

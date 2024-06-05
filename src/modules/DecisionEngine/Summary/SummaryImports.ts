@@ -64,7 +64,7 @@ export const barChartData = {
       data: [4200000, 1200000],
       borderColor: 'transparent',
       fill: true,
-      backgroundColor: ['#207EDF', '#B60A0A'],
+      backgroundColor: '#207EDF',
       // borderRadius:100,
     },
   ],

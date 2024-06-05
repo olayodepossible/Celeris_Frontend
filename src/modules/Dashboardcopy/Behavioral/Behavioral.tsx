@@ -1,5 +1,5 @@
 import Charts, { ChartType } from '../../../shared/Charts/Charts';
-import InfoCard, { IInfo } from '../../../shared/InfoCard/InfoCard';
+import InfoCard, { IInfo } from '../../../shared/Card/InfoCard/InfoCard';
 import './Behavioral.css';
 import { doughChartData, doughChartoptions } from './BehavioralImports';
 
@@ -97,7 +97,7 @@ const Behavioral = () => {
       </div>
       <div className="period d-flex align-items-center">
         <h3>Statement Period: </h3>
-        <p> {" "} 1 August 2023 - 22 February 2024</p>
+        <p> 1 August 2023 - 22 February 2024</p>
       </div>
     </div>
   );

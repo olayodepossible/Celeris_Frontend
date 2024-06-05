@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Filter.css';
 import { CelerisPrimaryBtn } from '../Button';
 
@@ -19,6 +19,7 @@ interface IFilterProps {
   styles: string;
   isFilter?: boolean | true;
   onApplyFilters?: (selectedFilters: { [key: string]: string }) => void;
+  onFormValidityChange?: (isValid: boolean) => void; 
 }
 
 const Filter = ({
@@ -27,10 +28,12 @@ const Filter = ({
   button,
   styles,
   onApplyFilters,
+  onFormValidityChange,
 }: IFilterProps) => {
   const [selectedOptions, setSelectedOptions] = useState<{
     [key: string]: string;
   }>({});
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const handleChange = (label: string, value: string) => {
     setSelectedOptions((prevState) => ({
@@ -44,6 +47,18 @@ const Filter = ({
       onApplyFilters(selectedOptions);
     }
   };
+
+  useEffect(() => {
+    // Check if all required fields are filled
+    const isValid = inputs.every(
+      (input) => !input.isRequired || (input.isRequired && selectedOptions[input.label])
+    );
+    setIsFormValid(isValid);
+    if (onFormValidityChange) {
+      onFormValidityChange(isValid); // Notify parent of form validity change
+    }
+  }, [inputs, selectedOptions, onFormValidityChange]);
+
   if (isFilter) {
     return (
       <div className={`filterOption ${styles}`}>
@@ -78,6 +93,7 @@ const Filter = ({
           width={button?.width ? button?.width : ''}
           onClick={handleApplyFilters}
           padding="8px 15px"
+          disabled={!isFormValid} 
         >
           {button ? button.text : 'Apply Filters'}
         </CelerisPrimaryBtn>
@@ -87,7 +103,7 @@ const Filter = ({
   return (
     <div className={`form ${styles}`}>
       {inputs.map((input, index) => (
-        <>
+        <React.Fragment key={index}>
           {input.type === 'select' ? (
             <div className="selectWrapper w-100" key={index}>
               <div className="form-group">
@@ -131,7 +147,7 @@ const Filter = ({
               />
             </div>
           )}
-        </>
+        </React.Fragment>
       ))}
     </div>
   );

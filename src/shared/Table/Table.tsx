@@ -15,10 +15,16 @@ interface TableProps {
   columns: any[];
   data: any[];
   withPagination?: boolean;
-  variant?: "outlined" | "normal"
+  variant?: 'outlined' | 'normal';
+  isLoading?: boolean;
 }
 
-const TableComponent = ({ columns, data, withPagination,variant }: TableProps) => {
+const TableComponent = ({
+  columns,
+  data,
+  withPagination,
+  variant,
+}: TableProps) => {
   const [pagination, setPagination] = React.useState<PaginationState>({
     pageIndex: 0,
     pageSize: 10,
@@ -65,19 +71,33 @@ const TableComponent = ({ columns, data, withPagination,variant }: TableProps) =
             </tr>
           ))}
         </thead>
-        <tbody>
-          {table.getRowModel().rows.map((row) => (
-            <tr key={row.id} className={variant}>
-              {row.getVisibleCells().map((cell) => (
-                <td key={cell.id}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
+        {data && (
+          <tbody>
+            {table.getRowModel().rows.map((row) => (
+              <tr key={row.id} className={variant}>
+                {row.getVisibleCells().map((cell) => {
+                  return (
+                    <td key={cell.id}>
+                      <span className={cell.getValue() as string}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext(),
+                        )}
+                      </span>
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        )}
       </table>
-      {withPagination && (
+      {!data.length && (
+        <span className="d-flex align-item-center justify-content-center nodata">
+          No data yet
+        </span>
+      )}
+      {withPagination && data.length > 0 && (
         <div className="d-flex justify-content-between w-75 pagination">
           <div>
             Showing {table.getRowModel().rows.length.toLocaleString()} of{' '}

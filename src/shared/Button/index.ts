@@ -23,6 +23,10 @@ export const CelerisPrimaryBtn = styled.button<ButtonProps>`
   line-height: 16px;
   letter-spacing: 1.600000023841858px;
   text-align: center;
+  &:disabled {
+    cursor: not-allowed;
+    background: #207edf80;
+  }
 `;
 export const CelerisSecondaryBtn = styled(CelerisPrimaryBtn)`
   color: #207edf;
@@ -30,7 +34,7 @@ export const CelerisSecondaryBtn = styled(CelerisPrimaryBtn)`
 `;
 export const CelerisDarkBtn = styled(CelerisPrimaryBtn)`
   color: white;
-  background-color: #060B26;
+  background-color: #060b26;
 `;
 
 export const CelerisPrimarySubmitBtn = styled(CelerisPrimaryBtn).attrs({

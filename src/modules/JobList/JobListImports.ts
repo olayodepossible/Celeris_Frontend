@@ -1,7 +1,10 @@
-import homelogo from '../../assets/logos/home.svg';
-import joblistlogo from '../../assets/logos/barchar.svg';
-
-
+import { ColumnDef } from "@tanstack/react-table";
+import fileUploads from '../../services/fileuploads.json'
+export type Person = {
+  name: string;
+  age: number;
+  country: string;
+};
 export const filterInputs = [
   {
     label: 'This month',
@@ -21,3 +24,36 @@ export const filterInputs = [
     value: [],
   },
 ];
+export const columns: ColumnDef<any>[] = [
+  {
+    header: ()=>'#',
+    accessorKey: 'id',
+  },
+  {
+    header: ()=>'Analysis ID',
+    accessorKey: 'analysis id',
+  },
+  {
+    header: ()=>'File Name',
+    accessorKey: 'file name',
+  },
+  {
+    header: ()=>'Status',
+    accessorKey: 'status',
+    cell: value => value.getValue()
+  },
+  {
+    header: ()=>'File Type',
+    accessorKey: 'file type',
+  },
+  {
+    header: ()=>'Creation Date',
+    accessorKey: 'creation date',
+  },
+  {
+    header: ()=>'Uploaded By',
+    accessorKey: 'uploaded by',
+  },
+];
+
+export const data = fileUploads

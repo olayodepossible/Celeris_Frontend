@@ -12,7 +12,7 @@
     margin-bottom: 20px;
 }
 
-.dragndrop form>p {
+.dragndrop .form>p {
     font-family: "Montserrat";
     font-size: 16px;
     font-weight: 600;
@@ -20,11 +20,11 @@
     margin-bottom: 15px;
 }
 
-.dragndrop form>p u {
+.dragndrop .form>p u {
     color: #207EDF;
 }
 
-.dragndrop form>h4 {
+.dragndrop .form>h4 {
     font-family: "Montserrat";
     font-size: 12px;
     font-weight: 400;

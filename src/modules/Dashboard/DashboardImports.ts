@@ -1,5 +1,3 @@
-import homelogo from '../../assets/logos/home.svg';
-import joblistlogo from '../../assets/logos/barchar.svg';
 import { IInputProps } from '../../shared/Filter/Filter';
 
 
@@ -16,7 +14,7 @@ export const filterInputs = [
     value: ['Under $50', '$50 to $100', 'Above $100'],
   },
 ];
-export const formInputs: IInputProps[] = [
+export const analysisformInputs: IInputProps[] = [
   {
     label: 'File Type',
     placeholder: 'Select File Type',
@@ -45,16 +43,20 @@ export const formInputs: IInputProps[] = [
     value: [],
   },
 ];
-export const labels = [
-  'Jan 2024',
-  'Feb 2024',
-  'Mar 2024',
-  'Apr 2024',
-  'May 2024',
-  'Jun 2024',
-  'Jul 2024',
-  'Aug 2024',
-  'Sep 2024',
+export const creditReportformInputs: IInputProps[] = [
+    {
+    label: 'Bank Verification Number',
+    placeholder: 'Enter BVN',
+    type: 'input',
+    value: [],
+    isRequired:true
+  },
+  {
+    label: 'Report Period (optional)',
+    placeholder: 'Enter File Password',
+    type: 'input',
+    value: [],
+  },
 ];
 export const barChartoptions = {
   elements: {
@@ -79,11 +81,11 @@ export const barChartoptions = {
   },
 };
 export const barChartData = {
-  labels,
+  labels:[],
   datasets: [
     {
       label: 'dataset 1',
-      data: [900, 1150, 650, 900, 1150, 650, 900, 1150, 650],
+      data: [],
       borderColor: '#207edf',
       backgroundColor: '#207edf',
     },

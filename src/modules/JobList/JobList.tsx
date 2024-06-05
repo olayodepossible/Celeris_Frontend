@@ -1,8 +1,7 @@
 import React from 'react';
 import Table from '../../shared/Table/Table';
 import Sidebar from '../../Layouts/Sidebar/Sidebar';
-import { filterInputs } from './JobListImports';
-import { ColumnDef } from '@tanstack/react-table';
+import { columns, data, filterInputs } from './JobListImports';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
@@ -10,13 +9,9 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Filter from '../../shared/Filter/Filter';
 import { CelerisDarkBtn } from '../../shared/Button';
-import "./JobList.css"
+import './JobList.css';
 
-export type Person = {
-  name: string;
-  age: number;
-  country: string;
-};
+
 
 const JobList = () => {
   const [value, setValue] = React.useState('1');
@@ -24,29 +19,7 @@ const JobList = () => {
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
-  const columns: ColumnDef<Person>[] = [
-    {
-      header: () => <span>Last Name</span>,
-      // cell: (info: any) => info.getValue(),
-      accessorKey: 'name',
-    },
-    {
-      header: () => 'Age',
-      // cell: (info: any) => info.getValue(),
-      accessorKey: 'age',
-    },
-    {
-      header: () => <span>Last Name</span>,
-      // cell: (info: any) => info.getValue(),
-      accessorKey: 'country',
-    },
-  ];
 
-  const data = Array.from({ length: 200 }, (_, index) => ({
-    name: `Name ${index + 1}`,
-    age: Math.floor(Math.random() * 50) + 20,
-    country: `Country ${index + 1}`,
-  }));
 
   return (
     <Sidebar>
@@ -82,7 +55,12 @@ const JobList = () => {
               ADD NEW JOB
             </CelerisDarkBtn>
           </div>
-          <Table columns={columns} data={data} variant='outlined' withPagination={true}/>
+          <Table
+            columns={columns}
+            data={data}
+            variant="outlined"
+            withPagination={true}
+          />
         </TabPanel>
         <TabPanel value="2">Item Two</TabPanel>
       </TabContext>
