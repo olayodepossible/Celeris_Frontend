@@ -7,9 +7,10 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import Filter from '../../shared/Filter/Filter';
-import { CelerisDarkBtn } from '../../shared/Button';
+import Form from '../../shared/Forms/Form';
+import { CelerisBtn } from '../../shared/Button';
 import './JobList.css';
+import ProgressBar from '../../shared/ProgressBar/ProgressBar';
 
 const JobList = () => {
   const [value, setValue] = React.useState('1');
@@ -37,7 +38,7 @@ const JobList = () => {
         </Box>
         <TabPanel value="1">
           <div className="d-flex flex-lg-row flex-column justify-content-between w-100  mb-3">
-            <Filter
+            <Form
               inputs={filterInputs}
               styles="d-flex"
               isFilter={true}
@@ -45,12 +46,7 @@ const JobList = () => {
                 text: 'SUBMIT',
               }}
             />
-            <CelerisDarkBtn
-              font={{ s: '11px', f: 'Poppins', w: 600 }}
-              padding="0px 8px"
-            >
-              ADD NEW JOB
-            </CelerisDarkBtn>
+            <CelerisBtn variant="dark">ADD NEW JOB</CelerisBtn>
           </div>
           <Table
             columns={columns}
@@ -59,7 +55,9 @@ const JobList = () => {
             withPagination={true}
           />
         </TabPanel>
-        <TabPanel value="2">Item Two</TabPanel>
+        <TabPanel value="2">
+          <ProgressBar progress={85} />
+        </TabPanel>
       </TabContext>
     </Sidebar>
   );

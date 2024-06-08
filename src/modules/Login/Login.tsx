@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import styles from './Login.module.css';
 import logo from '../../assets/logos/Logo.png';
-import { CelerisPrimarySubmitBtn } from '../../shared/Button';
+import { CelerisBtn } from '../../shared/Button';
 import { useNavigate } from 'react-router-dom';
 
 interface IStateProps {
   email?: string;
   password?: string;
   rememberMe?: boolean;
-  // setEmail: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Login = () => {
@@ -20,6 +19,11 @@ const Login = () => {
   const onSubmit = (e: any) => {
     e.preventDefault();
     console.log(login);
+    const mockAccessToken = 'mockAccessToken123';
+    const mockRefreshToken = 'mockRefreshToken123';
+
+    localStorage.setItem('accessToken', mockAccessToken);
+    localStorage.setItem('refreshToken', mockRefreshToken);
     navigate('/dashboard');
   };
   return (
@@ -63,13 +67,12 @@ const Login = () => {
               Remember Me
             </label>
           </div>
-          <CelerisPrimarySubmitBtn
+          <CelerisBtn
+            variant="primary"
             disabled={!login.email || !login.password}
-            padding="11px 0"
-            width="100%"
           >
             SIGN IN
-          </CelerisPrimarySubmitBtn>
+          </CelerisBtn>
           <div className="w-100">
             <a href="#" className={styles.forgotPassword}>
               Forgot Password?

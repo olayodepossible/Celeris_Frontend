@@ -11,6 +11,7 @@ import {
 } from '@tanstack/react-table';
 import './Table.css';
 import { Pagination, Stack } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 interface TableProps {
   columns: any[];
   data: any[];
@@ -30,9 +31,12 @@ const TableComponent = ({
     pageSize: 10,
   });
   // const [data, setData] = React.useState()
+  const navigate = useNavigate();
+
   const pageNumbers: any[] = [];
   const memoColumn = useMemo(() => columns, []);
   const memoData = useMemo(() => data, []);
+
   const table = useReactTable({
     columns: memoColumn,
     data: memoData,
@@ -74,7 +78,16 @@ const TableComponent = ({
         {data && (
           <tbody>
             {table.getRowModel().rows.map((row) => (
-              <tr key={row.id} className={variant}>
+              <tr
+                key={row.id}
+                onClick={() => {
+                  const rowData =
+                    row._getAllCellsByColumnId().id.row.original.id;
+                  navigate(`statement/${rowData}`);
+                  console.log(rowData);
+                }}
+                className={variant}
+              >
                 {row.getVisibleCells().map((cell) => {
                   return (
                     <td key={cell.id}>

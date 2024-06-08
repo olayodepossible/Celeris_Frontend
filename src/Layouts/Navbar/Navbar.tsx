@@ -1,6 +1,6 @@
 import * as React from 'react';
 import celeris from '../../assets/logos/Logo.png';
-import { CelerisPrimaryBtn } from '../../shared/Button';
+import { CelerisBtn } from '../../shared/Button';
 import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 export default function Navbar() {
@@ -112,9 +112,9 @@ export default function Navbar() {
                 </ul>
               </li>
               <Link to="login">
-                <CelerisPrimaryBtn rounded="true">
+                <CelerisBtn variant="primary" rounded="true">
                   Request Demo
-                </CelerisPrimaryBtn>
+                </CelerisBtn>
               </Link>
             </ul>
           </div>

@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 
 import Sidebar from '../../Layouts/Sidebar/Sidebar';
 import './Dashboard.css';
-import Filter from '../../shared/Filter/Filter';
+import Form from '../../shared/Forms/Form';
 import Charts, { ChartType } from '../../shared/Charts/Charts';
 import {
   analysisformInputs,
@@ -16,7 +16,7 @@ import {
   pendingDoughChartData,
   pendingDoughChartoptions,
 } from './DashboardImports';
-import { CelerisPrimaryBtn } from '../../shared/Button';
+import { CelerisBtn } from '../../shared/Button';
 import DragNDrop from '../../shared/DragNDrop/DragNDrop';
 import useChartQuery from '../../utils/customHooks/UseChartQuery';
 
@@ -54,7 +54,7 @@ const Dashboard = () => {
         <div className="content">
           <h2 className="header">Hi, Admin Name,</h2>
           <div className="filters d-flex justify-content-center">
-            <Filter
+            <Form
               isFilter={true}
               styles="d-flex justify-content-between"
               inputs={filterInputs}
@@ -107,7 +107,7 @@ const Dashboard = () => {
               <div className="walletbalance">
                 <p className="title">Wallet Balance</p>
                 <h2 className="balance">100,500.00</h2>
-                <CelerisPrimaryBtn>FUND WALLET</CelerisPrimaryBtn>
+                <CelerisBtn variant="primary">FUND WALLET</CelerisBtn>
                 <a href="#" className="viewtransaction">
                   View Transactions
                 </a>
@@ -115,7 +115,7 @@ const Dashboard = () => {
               <div className="noofjobs">
                 <p className="title">Total Number of Jobs</p>
                 <h2 className="balance">602</h2>
-                <CelerisPrimaryBtn>ADD NEW JOB</CelerisPrimaryBtn>
+                <CelerisBtn variant="primary">ADD NEW JOB</CelerisBtn>
                 <ul className="options w-100">
                   <li>
                     <a href="#" onClick={() => setModalOpen(true)}>
@@ -163,7 +163,7 @@ const Dashboard = () => {
                   </span>
                 </h2>
               </div>
-              <Filter
+              <Form
                 isFilter={false}
                 inputs={analysisformInputs}
                 onApplyFilters={handleApplyFilters}
@@ -198,13 +198,9 @@ const Dashboard = () => {
                     </div>
                   ))}
               </div>
-              <CelerisPrimaryBtn
-                disabled={!isFormValid}
-                width="100%"
-                padding="11px"
-              >
+              <CelerisBtn variant="primary" disabled={!isFormValid}>
                 Analyze Bank Statement
-              </CelerisPrimaryBtn>
+              </CelerisBtn>
             </form>
           </Modal>
         </div>
@@ -237,20 +233,16 @@ const Dashboard = () => {
                   </span>
                 </h2>
               </div>
-              <Filter
+              <Form
                 isFilter={false}
                 inputs={creditReportformInputs}
                 onApplyFilters={handleApplyFilters}
                 onFormValidityChange={handleFormValidityChange}
                 styles="d-flex flex-column justify-content-center align-items-center"
               />
-              <CelerisPrimaryBtn
-                disabled={!isFormValid}
-                width="100%"
-                padding="11px"
-              >
+              <CelerisBtn variant="primary" disabled={!isFormValid}>
                 Analyze Bank Statement
-              </CelerisPrimaryBtn>
+              </CelerisBtn>
             </form>
           </Modal>
         </div>

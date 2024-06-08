@@ -1,4 +1,4 @@
-import { IInputProps } from '../../shared/Filter/Filter';
+import { IInputProps } from '../../shared/Forms/Form';
 
 export const filterInputs = [
   {

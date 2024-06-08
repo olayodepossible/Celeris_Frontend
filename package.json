@@ -58,9 +58,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "coverage": "yarn test --coverage --watch-all --collectCoverageFrom='src/components/**/*.{tsx,ts}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'",
-    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
-    "prepare": "husky"
+    "prepare": "husky",
+    "precommit": "yarn run lint && yarn run format"
   },
   "browserslist": {
     "production": [

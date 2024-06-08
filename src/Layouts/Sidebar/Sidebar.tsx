@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Sidebar.module.css';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo1 from '../../assets/logos/Logo1.png';
 import { links } from './SidebarImports';
 import useWindowSize from '../../utils/customHooks/UseWindowSize';
@@ -27,25 +27,24 @@ const Sidebar: React.FC<SidebarProps> = ({ children }: SidebarProps) => {
 
   return (
     <>
-      {isOpen === false && (
-        <button
-          className={styles.burger}
-          onClick={() => setIsOpen((isOpen) => !isOpen)}
-        >
-          <div className={styles.burgerLine}></div>
-          <div className={styles.burgerLine}></div>
-          <div className={styles.burgerLine}></div>
-        </button>
-      )}
+      <button
+        className={styles.burger}
+        onClick={() => setIsOpen((isOpen) => !isOpen)}
+      >
+        <div className={styles.burgerLine}></div>
+        <div className={styles.burgerLine}></div>
+        <div className={styles.burgerLine}></div>
+      </button>
+
       <div className={styles.sidebar}>
         {isOpen === true && (
           <div
             className={` ${styles.titleBlockContainer} ${isOpen ? styles.open : styles.closed}`}
           >
             <nav className="d-flex flex-column align-items-center justify-content-center">
-              <div className={styles.logo}>
+              <Link to={'/'} className={styles.logo}>
                 <img src={logo1} alt="Celeris" />
-              </div>
+              </Link>
               <ul className={`${styles.navList}`}>
                 {links.map((link, index) => (
                   <li

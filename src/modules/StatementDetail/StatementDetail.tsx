@@ -1,5 +1,5 @@
 import Sidebar from '../../Layouts/Sidebar/Sidebar';
-import './DashboardDetail.css';
+import './StatementDetail.css';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabPanel from '@mui/lab/TabPanel';
@@ -7,13 +7,21 @@ import React from 'react';
 import Summary from './Summary/Summary';
 import Box from '@mui/material/Box';
 import TabList from '@mui/lab/TabList';
-import { CelerisPrimaryBtn } from '../../shared/Button';
+import { CelerisBtn } from '../../shared/Button';
 import Behavioral from './Behavioral/Behavioral';
 import CashFlow from './CashFlow/CashFlow';
 import Transactions from './Transactions/Transactions';
 
-const DashboardDetail = () => {
+import fileUploads from '../../services/fileuploads.json';
+import { useParams } from 'react-router-dom';
+
+const StatementDetail = () => {
   const [value, setValue] = React.useState('1');
+  const { id } = useParams();
+
+  const details = fileUploads.filter(
+    (file) => file.id === parseInt(id as string),
+  );
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -23,7 +31,7 @@ const DashboardDetail = () => {
     <Sidebar>
       <div className="header">
         <h2 className="heading">Samson Falaye.PDF</h2>
-        <p className="subheading">ID: 0eutyr785-5bgh-syhghf-fhgjd00rtn</p>
+        <p className="subheading">ID: {details[0].analysis_id}</p>
       </div>
       <TabContext value={value}>
         <Box className="d-flex justify-content-between w-100">
@@ -38,9 +46,7 @@ const DashboardDetail = () => {
             <Tab label="Behavioral" value="3" />
             <Tab label="Transactions" value="4" />
           </TabList>
-          <CelerisPrimaryBtn padding="10px 21px">
-            DOWNLOAD REPORT
-          </CelerisPrimaryBtn>
+          <CelerisBtn variant="primary">DOWNLOAD REPORT</CelerisBtn>
         </Box>
         <TabPanel value="1">
           <Summary />
@@ -59,4 +65,4 @@ const DashboardDetail = () => {
   );
 };
 
-export default DashboardDetail;
+export default StatementDetail;

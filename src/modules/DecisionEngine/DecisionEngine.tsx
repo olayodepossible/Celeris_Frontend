@@ -6,7 +6,7 @@ import React from 'react';
 import Summary from './Summary/Summary';
 import Box from '@mui/material/Box';
 import TabList from '@mui/lab/TabList';
-import { CelerisPrimaryBtn } from '../../shared/Button';
+import { CelerisBtn } from '../../shared/Button';
 import CRC from './CRC/CRC';
 import CreditRegistry from './CreditRegistry/CreditRegistry';
 import FirstCentral from './FirstCentral/FirstCentral';
@@ -38,9 +38,7 @@ const DecisionEngine = () => {
             <Tab label="CRC" value="3" />
             <Tab label="First Central" value="4" />
           </TabList>
-          <CelerisPrimaryBtn padding="10px 21px">
-            DOWNLOAD REPORT
-          </CelerisPrimaryBtn>
+          <CelerisBtn variant="primary">DOWNLOAD REPORT</CelerisBtn>
         </Box>
         <TabPanel value="1">
           <Summary />

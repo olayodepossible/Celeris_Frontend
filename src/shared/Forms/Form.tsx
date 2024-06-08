@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Filter.css';
-import { CelerisPrimaryBtn } from '../Button';
+import './Form.css';
+import { CelerisBtn } from '../Button';
 
 export interface IInputProps {
   label: string;
@@ -22,7 +22,7 @@ interface IFilterProps {
   onFormValidityChange?: (isValid: boolean) => void;
 }
 
-const Filter = ({
+const Form = ({
   inputs,
   isFilter,
   button,
@@ -90,14 +90,13 @@ const Filter = ({
             )}
           </div>
         ))}
-        <CelerisPrimaryBtn
-          width={button?.width ? button?.width : ''}
+        <CelerisBtn
+          variant="primary"
           onClick={handleApplyFilters}
-          padding="8px 15px"
           disabled={!isFormValid}
         >
           {button ? button.text : 'Apply Filters'}
-        </CelerisPrimaryBtn>
+        </CelerisBtn>
       </div>
     );
   }
@@ -116,7 +115,7 @@ const Filter = ({
                   required={input.isRequired}
                   onChange={(e) => {
                     handleChange(input.label, e.target.value);
-                    handleApplyFilters;
+                    handleApplyFilters();
                   }}
                   value={selectedOptions[input.label] || ''}
                 >
@@ -141,7 +140,7 @@ const Filter = ({
                 id={input.type}
                 onChange={(e) => {
                   handleChange(input.label, e.target.value);
-                  handleApplyFilters;
+                  handleApplyFilters();
                 }}
                 placeholder={input.placeholder}
                 required={input.isRequired}
@@ -154,4 +153,4 @@ const Filter = ({
   );
 };
 
-export default Filter;
+export default Form;
