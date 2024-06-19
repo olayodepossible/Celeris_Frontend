@@ -1,5 +1,5 @@
 // TableWithPagination.tsx
-import React, { useMemo } from 'react';
+import React, { useMemo } from "react";
 import {
   PaginationState,
   flexRender,
@@ -8,15 +8,15 @@ import {
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
-} from '@tanstack/react-table';
-import './Table.css';
-import { Pagination, Stack } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+} from "@tanstack/react-table";
+import "./Table.css";
+import { Pagination, Stack } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 interface TableProps {
   columns: any[];
   data: any[];
   withPagination?: boolean;
-  variant?: 'outlined' | 'normal';
+  variant?: "outlined" | "normal";
   isLoading?: boolean;
 }
 
@@ -113,11 +113,11 @@ const TableComponent = ({
       {withPagination && data.length > 0 && (
         <div className="d-flex justify-content-between w-75 pagination">
           <div>
-            Showing {table.getRowModel().rows.length.toLocaleString()} of{' '}
+            Showing {table.getRowModel().rows.length.toLocaleString()} of{" "}
             {table.getRowCount().toLocaleString()} Rows
           </div>
           <div>
-            <Stack spacing={2} justifySelf={'center'} alignSelf={'center'}>
+            <Stack spacing={2} justifySelf={"center"} alignSelf={"center"}>
               <Pagination
                 count={pageNumbers.length}
                 onChange={(event, page) => {

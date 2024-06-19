@@ -6,27 +6,27 @@ export const doughChartoptions = {
     },
     legend: {
       display: true,
-      position: 'bottom' as const,
-      align: 'start',
+      position: "bottom" as const,
+      align: "start",
     },
   },
 };
 export const doughChartData = {
   labels: [
-    'Payments',
-    'Entertainment',
-    'Gambling',
-    'Loans',
-    'Crypto',
-    'Others',
+    "Payments",
+    "Entertainment",
+    "Gambling",
+    "Loans",
+    "Crypto",
+    "Others",
   ],
   datasets: [
     {
-      label: 'dataset 1',
+      label: "dataset 1",
       data: [4000, 1900, 3000, 4700],
-      borderColor: '#fff',
+      borderColor: "#fff",
       fill: true,
-      backgroundColor: ['#207EDFCC', '#207EDF', '#207EDF80', '#207EDF'],
+      backgroundColor: ["#207EDFCC", "#207EDF", "#207EDF80", "#207EDF"],
     },
   ],
 };

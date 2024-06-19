@@ -1,27 +1,28 @@
-import { Suspense, lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { QueryClientProvider, QueryClient } from 'react-query';
+import { Suspense, lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+import { QueryClientProvider, QueryClient } from "react-query";
 
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './App.css';
-import Loader from './shared/Loader/Loader';
-import AuthGuard from './utils/guards/AuthGuard';
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./App.css";
+import Loader from "./shared/Loader/Loader";
+import AuthGuard from "./utils/guards/AuthGuard";
 
-const Main = lazy(() => import('./Layouts'));
-const Landing = lazy(() => import('./modules/Landing/Landing'));
-const Login = lazy(() => import('./modules/Login/Login'));
-const Dashboard = lazy(() => import('./modules/Dashboard/Dashboard'));
+const Main = lazy(() => import("./Layouts"));
+const Landing = lazy(() => import("./modules/Landing/Landing"));
+const Login = lazy(() => import("./modules/Login/Login"));
+const Dashboard = lazy(() => import("./modules/Dashboard/Dashboard"));
+const CreditSearch = lazy(() => import("./modules/CreditSearch/CreditSearch"));
 const DecisionEngine = lazy(
-  () => import('./modules/DecisionEngine/DecisionEngine'),
+  () => import("./modules/DecisionEngine/DecisionEngine"),
 );
 const StatementDetail = lazy(
-  () => import('./modules/StatementDetail/StatementDetail'),
+  () => import("./modules/StatementDetail/StatementDetail"),
 );
 
-const JobList = lazy(() => import('./modules/JobList/JobList'));
+const JobList = lazy(() => import("./modules/JobList/JobList"));
 
 const queryClient = new QueryClient();
 const App = () => {
@@ -52,6 +53,14 @@ const App = () => {
             element={
               <AuthGuard>
                 <DecisionEngine />
+              </AuthGuard>
+            }
+          />
+          <Route
+            path="/creditSearch"
+            element={
+              <AuthGuard>
+                <CreditSearch />
               </AuthGuard>
             }
           />

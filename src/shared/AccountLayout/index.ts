@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 interface ButtonProps {
-  rounded?: 'true' | 'false';
+  rounded?: "true" | "false";
   padding?: string;
   width?: string;
   font?: {
@@ -11,13 +11,13 @@ interface ButtonProps {
 }
 export const AccountLayout = styled.div<ButtonProps>`
   background: #c4c4c41a;
-  border-radius: ${(props) => (props.rounded ? '80px' : '10px')};
+  border-radius: ${(props) => (props.rounded ? "80px" : "10px")};
   border: none;
   padding: ${(props) =>
-    props.rounded === 'true' ? '27px 32px' : props.padding || '20px 20px'};
-  width: ${(props) => (props.width ? props.width : '98%')};
-  font-family: ${(props) => (props.font?.f ? props.font?.f : 'DM Sans')};
-  font-size: ${(props) => (props.font?.s ? props.font?.s + 'px' : '16px')};
+    props.rounded === "true" ? "27px 32px" : props.padding || "20px 20px"};
+  width: ${(props) => (props.width ? props.width : "98%")};
+  font-family: ${(props) => (props.font?.f ? props.font?.f : "DM Sans")};
+  font-size: ${(props) => (props.font?.s ? props.font?.s + "px" : "16px")};
   font-weight: ${(props) => (props.font?.w ? props.font?.w : 700)};
   line-height: 16px;
   letter-spacing: 1.600000023841858px;

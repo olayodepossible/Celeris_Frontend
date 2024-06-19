@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import Modal from 'react-modal';
+import { useState } from "react";
+import Modal from "react-modal";
 
-import Sidebar from '../../Layouts/Sidebar/Sidebar';
-import './Dashboard.css';
-import Form from '../../shared/Forms/Form';
-import Charts, { ChartType } from '../../shared/Charts/Charts';
+import Sidebar from "../../Layouts/Sidebar/Sidebar";
+import "./Dashboard.css";
+import Form from "../../shared/Forms/Form";
+import Charts, { ChartType } from "../../shared/Charts/Charts";
 import {
   analysisformInputs,
   barChartData,
@@ -15,12 +15,12 @@ import {
   filterInputs,
   pendingDoughChartData,
   pendingDoughChartoptions,
-} from './DashboardImports';
-import { CelerisBtn } from '../../shared/Button';
-import DragNDrop from '../../shared/DragNDrop/DragNDrop';
-import useChartQuery from '../../utils/customHooks/UseChartQuery';
+} from "./DashboardImports";
+import { CelerisBtn } from "../../shared/Button";
+import DragNDrop from "../../shared/DragNDrop/DragNDrop";
+import useChartQuery from "../../utils/customHooks/UseChartQuery";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 const Dashboard = () => {
   const [filters, setFilters] = useState<{ [key: string]: string }>({});
   const [files, setFiles] = useState<any>([]);
@@ -33,7 +33,7 @@ const Dashboard = () => {
   };
   const handleApplyFilters = (selectedFilters: { [key: string]: string }) => {
     setFilters(selectedFilters);
-    console.log('Applied Filters:', selectedFilters, filters);
+    console.log("Applied Filters:", selectedFilters, filters);
   };
   const { isLoading, labels, datas, isError } = useChartQuery();
   function removeFile(fileName: any, idx: any) {
@@ -45,7 +45,7 @@ const Dashboard = () => {
 
   const handleDragNDrop = (file: any) => {
     setFiles((prevState: []) => [...prevState, file]);
-    console.log('selected Files', files);
+    console.log("selected Files", files);
   };
 
   return (

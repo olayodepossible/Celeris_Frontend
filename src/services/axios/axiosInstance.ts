@@ -1,14 +1,14 @@
-import axios from 'axios';
+import axios from "axios";
 
 const baseUrl =
   process.env.REACT_APP_BASE_URL ||
-  'https://665f06581e9017dc16f27e33.mockapi.io';
+  "https://665f06581e9017dc16f27e33.mockapi.io";
 
 const axiosInstance = axios.create({ baseURL: baseUrl });
 
 axiosInstance.interceptors.request.use(
   (config) => {
-    const accessToken = localStorage.getItem('accessToken');
+    const accessToken = localStorage.getItem("accessToken");
     if (accessToken) {
       config.headers.Authorization = `Bearer ${accessToken}`;
     }
@@ -25,23 +25,23 @@ axiosInstance.interceptors.response.use(
     if (error.response.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
 
-      const refreshToken = localStorage.getItem('refreshToken');
+      const refreshToken = localStorage.getItem("refreshToken");
       try {
         const response = await axios.post(`${baseUrl}/refresh-token`, {
           token: refreshToken,
         });
         const { accessToken } = response.data;
 
-        localStorage.setItem('accessToken', accessToken);
-        axios.defaults.headers.common['Authorization'] =
+        localStorage.setItem("accessToken", accessToken);
+        axios.defaults.headers.common["Authorization"] =
           `Bearer ${accessToken}`;
 
         return axiosInstance(originalRequest);
       } catch (refreshError) {
         // Handle refresh token expiration or other errors
-        localStorage.removeItem('accessToken');
-        localStorage.removeItem('refreshToken');
-        window.location.href = '/login';
+        localStorage.removeItem("accessToken");
+        localStorage.removeItem("refreshToken");
+        window.location.href = "/login";
         return Promise.reject(refreshError);
       }
     }

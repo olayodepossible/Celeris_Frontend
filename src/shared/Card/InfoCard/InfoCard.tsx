@@ -1,4 +1,4 @@
-import './InfoCard.css';
+import "./InfoCard.css";
 
 export interface IInfo {
   title: string;

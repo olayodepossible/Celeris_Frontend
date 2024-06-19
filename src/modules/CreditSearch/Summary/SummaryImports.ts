@@ -1,11 +1,3 @@
-const formatNumber = (num: number): string => {
-  if (num >= 1000000) {
-    return (num / 1000000).toFixed(1) + "M";
-  } else if (num >= 1000) {
-    return (num / 1000).toFixed(1) + "K";
-  }
-  return num.toString();
-};
 export const labels = [];
 
 export const barChartoptions = {
@@ -19,51 +11,44 @@ export const barChartoptions = {
     title: {
       display: false,
     },
+    label: {
+      display: false,
+    },
     legend: {
       display: false,
-      position: "right" as const,
     },
   },
   scales: {
-    y: {
-      grid: {
-        display: false,
-      },
-      ticks: {
-        callback: function (value: number) {
-          return formatNumber(value as number);
-        },
-        stepSize: 500000,
-      },
-    },
     x: {
-      grid: {
-        display: false,
-      },
-      //   reverse: true,
+      display: false,
+    },
+    y: {
+      display: false,
     },
   },
-  datalabels: {
-    display: true,
-    align: "top",
-    anchor: "top",
-    formatter: (value: number) => formatNumber(value),
-    font: {
-      weight: "bold",
-    },
-  },
-  // indexAxis:"y"
 };
 export const barChartData = {
-  labels: ["Credit", "Debit"],
+  labels: ["jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
   datasets: [
     {
       label: "dataset 1",
-      data: [4200000, 1200000],
+      data: [650, 1250, 400, 900, 1700, 1250, 1700],
       borderColor: "transparent",
       fill: true,
-      backgroundColor: ["#207EDF", "#B60A0A"],
-      // borderRadius:100,
+      backgroundColor: "#1FCB4F",
+    },
+  ],
+};
+
+export const barChartData2 = {
+  labels: ["jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+  datasets: [
+    {
+      label: "dataset 1",
+      data: [650, 1250, 400, 900, 1700, 1250, 400],
+      borderColor: "transparent",
+      fill: true,
+      backgroundColor: "#F46D22",
     },
   ],
 };
@@ -121,12 +106,14 @@ export const lineChartData = {
         }
         const {
           ctx,
+          data,
           chartArea: { top, bottom },
         } = context.chart;
         const gradientBg = ctx.createLinearGradient(0, top, 0, bottom);
         gradientBg.addColorStop(0, bgColor[0]);
         gradientBg.addColorStop(0.2, bgColor[0]);
         gradientBg.addColorStop(1, bgColor[1]);
+        console.log(data);
         return gradientBg;
       },
       pointBackgroundColor: "transparent",

@@ -1,6 +1,6 @@
-import * as React from 'react';
-import styles from './Card.module.css';
-import { CelerisBtn } from '../Button';
+import * as React from "react";
+import styles from "./Card.module.css";
+import { CelerisBtn } from "../Button";
 
 export interface ICardProps {
   img?: string;

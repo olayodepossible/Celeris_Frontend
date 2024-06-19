@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface IPaginationProps {
   pageIndex: number;
@@ -21,13 +21,13 @@ const Pagination = ({ pageIndex, pageCount, gotoPage }: IPaginationProps) => {
       pages.push(i);
     }
     if (endPage < pageCount) {
-      pages.push('...', pageCount);
+      pages.push("...", pageCount);
     }
     return pages;
   };
 
   const handlePageClick = (page: string | number) => {
-    if (typeof page === 'number') {
+    if (typeof page === "number") {
       gotoPage(page - 1);
     }
   };
@@ -47,7 +47,7 @@ const Pagination = ({ pageIndex, pageCount, gotoPage }: IPaginationProps) => {
         <button
           key={index}
           onClick={() => handlePageClick(page)}
-          className={pageIndex + 1 === page ? 'active' : ''}
+          className={pageIndex + 1 === page ? "active" : ""}
         >
           {page}
         </button>

@@ -1,6 +1,6 @@
-import styles from '../Landing.module.css';
-import { settings, sliderItems } from '../Landing.imports';
-import Slider from 'react-slick';
+import styles from "../Landing.module.css";
+import { settings, sliderItems } from "../Landing.imports";
+import Slider from "react-slick";
 
 const Feedback = () => {
   return (

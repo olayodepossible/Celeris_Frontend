@@ -1,5 +1,5 @@
-import React from 'react';
-import './ProgressBar.css';
+import React from "react";
+import "./ProgressBar.css";
 
 interface ProgressBarProps {
   progress: number;
@@ -32,13 +32,13 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
         {/* <p className="progress-percentage">{progress}</p> */}
       </div>
       <div className="breakpoints">
-        <div className="breakpoint" style={{ left: '25%' }}></div>
+        <div className="breakpoint" style={{ left: "25%" }}></div>
         <br />
-        <div className="breakpoint" style={{ left: '50%' }}></div>
+        <div className="breakpoint" style={{ left: "50%" }}></div>
         <br />
-        <div className="breakpoint" style={{ left: '75%' }}></div>
+        <div className="breakpoint" style={{ left: "75%" }}></div>
         <br />
-        <div className="breakpoint" style={{ left: '100%' }}></div>
+        <div className="breakpoint" style={{ left: "100%" }}></div>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
-import * as React from 'react';
-import celeris from '../../assets/logos/Logo.png';
-import { CelerisBtn } from '../../shared/Button';
-import styles from './Navbar.module.css';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import celeris from "../../assets/logos/Logo.png";
+import { CelerisBtn } from "../../shared/Button";
+import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>

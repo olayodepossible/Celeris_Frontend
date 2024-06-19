@@ -1,9 +1,9 @@
-import * as React from 'react';
-import styles from './Footer.module.css';
-import logo1 from '../../assets/logos/Logo1.png';
-import insta from '../../assets/logos/insta.png';
-import facebook from '../../assets/logos/facebook.png';
-import linkedin from '../../assets/logos/linkedin.png';
+import * as React from "react";
+import styles from "./Footer.module.css";
+import logo1 from "../../assets/logos/Logo1.png";
+import insta from "../../assets/logos/insta.png";
+import facebook from "../../assets/logos/facebook.png";
+import linkedin from "../../assets/logos/linkedin.png";
 
 export default function Footer() {
   return (

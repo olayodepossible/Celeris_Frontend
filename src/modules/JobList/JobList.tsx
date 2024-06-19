@@ -1,19 +1,19 @@
-import React from 'react';
-import Table from '../../shared/Table/Table';
-import Sidebar from '../../Layouts/Sidebar/Sidebar';
-import { columns, data, filterInputs } from './JobListImports';
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
-import Form from '../../shared/Forms/Form';
-import { CelerisBtn } from '../../shared/Button';
-import './JobList.css';
-import ProgressBar from '../../shared/ProgressBar/ProgressBar';
+import React from "react";
+import Table from "../../shared/Table/Table";
+import Sidebar from "../../Layouts/Sidebar/Sidebar";
+import { columns, data, filterInputs } from "./JobListImports";
+import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
+import Form from "../../shared/Forms/Form";
+import { CelerisBtn } from "../../shared/Button";
+import "./JobList.css";
+import ProgressBar from "../../shared/ProgressBar/ProgressBar";
 
 const JobList = () => {
-  const [value, setValue] = React.useState('1');
+  const [value, setValue] = React.useState("1");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -30,7 +30,7 @@ const JobList = () => {
         </p>
       </div>
       <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
             <Tab label="Bank Statement Analysis History" value="1" />
             <Tab label="Credit Check History" value="2" />
@@ -43,7 +43,7 @@ const JobList = () => {
               styles="d-flex"
               isFilter={true}
               button={{
-                text: 'SUBMIT',
+                text: "SUBMIT",
               }}
             />
             <CelerisBtn variant="dark">ADD NEW JOB</CelerisBtn>

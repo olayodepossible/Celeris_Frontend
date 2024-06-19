@@ -1,7 +1,7 @@
-import Table from '../../../shared/Table/Table';
-import { columns } from './CashFlowImports';
-import useTableQuery from '../../../utils/customHooks/UseTableQuery';
-import './CashFlow.css';
+import Table from "../../../shared/Table/Table";
+import { columns } from "./CashFlowImports";
+import useTableQuery from "../../../utils/customHooks/UseTableQuery";
+import "./CashFlow.css";
 
 const CashFlow = () => {
   const [isLoading, data] = useTableQuery();

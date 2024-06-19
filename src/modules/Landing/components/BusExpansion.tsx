@@ -1,5 +1,5 @@
-import styles from '../Landing.module.css';
-import Imports from '../Landing.imports';
+import styles from "../Landing.module.css";
+import Imports from "../Landing.imports";
 
 const BusExpansion = () => {
   return (

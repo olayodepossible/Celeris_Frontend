@@ -73,14 +73,11 @@
   padding: 0;
 }
 
-.navList > li {
+.navList>li {
   width: 100%;
 }
-.navList li:first-child {
-  padding-left: 10px;
-}
 
-.navList li a:hover{
+.navList li a:hover {
   background: #1A1F37;
 }
 
@@ -98,8 +95,11 @@
   line-height: 14px;
   gap: 15px;
 }
-.active {
-  background: #1A1F37 !important;
+
+.navList>li>a img {
+  background-color: #1A1F37;
+  padding: 10px;
+  border-radius: 50px;
 }
 
 .burger {
@@ -126,6 +126,7 @@
     flex-direction: column;
     gap: 5px;
   }
+
   .content {
     position: absolute;
     left: 0;

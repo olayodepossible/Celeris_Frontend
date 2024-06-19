@@ -1,24 +1,24 @@
-import Charts, { ChartType } from '../../../shared/Charts/Charts';
-import InfoCard, { IInfo } from '../../../shared/Card/InfoCard/InfoCard';
-import './Behavioral.css';
-import { doughChartData, doughChartoptions } from './BehavioralImports';
+import Charts, { ChartType } from "../../../shared/Charts/Charts";
+import InfoCard, { IInfo } from "../../../shared/Card/InfoCard/InfoCard";
+import "./Behavioral.css";
+import { doughChartData, doughChartoptions } from "./BehavioralImports";
 
 const Behavioral = () => {
   const infos: IInfo[] = [
     {
-      title: 'Sweeps Account',
-      amount: 'NO',
-      color: '#207EDF',
+      title: "Sweeps Account",
+      amount: "NO",
+      color: "#207EDF",
     },
     {
-      title: 'Transfer to Self (Credit)',
-      amount: '1,205,867.621',
-      color: '#F84444',
+      title: "Transfer to Self (Credit)",
+      amount: "1,205,867.621",
+      color: "#F84444",
     },
     {
-      title: 'Transfer to Self (Debit)',
-      amount: '208,564,501.22',
-      color: '#C607E5',
+      title: "Transfer to Self (Debit)",
+      amount: "208,564,501.22",
+      color: "#C607E5",
     },
   ];
   return (

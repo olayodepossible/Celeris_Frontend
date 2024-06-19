@@ -1,5 +1,5 @@
-import styles from '../Landing.module.css';
-import { companies } from '../Landing.imports';
+import styles from "../Landing.module.css";
+import { companies } from "../Landing.imports";
 
 const Finance = () => {
   return (

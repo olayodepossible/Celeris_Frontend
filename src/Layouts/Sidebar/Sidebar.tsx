@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import styles from './Sidebar.module.css';
-import { Link, NavLink } from 'react-router-dom';
-import logo1 from '../../assets/logos/Logo1.png';
-import { links } from './SidebarImports';
-import useWindowSize from '../../utils/customHooks/UseWindowSize';
+import React, { useState, useEffect } from "react";
+import styles from "./Sidebar.module.css";
+import { Link, NavLink } from "react-router-dom";
+import logo1 from "../../assets/logos/Logo1.png";
+import { links } from "./SidebarImports";
+import useWindowSize from "../../utils/customHooks/UseWindowSize";
 
 interface SidebarProps {
   children: React.ReactNode;
@@ -42,7 +42,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }: SidebarProps) => {
             className={` ${styles.titleBlockContainer} ${isOpen ? styles.open : styles.closed}`}
           >
             <nav className="d-flex flex-column align-items-center justify-content-center">
-              <Link to={'/'} className={styles.logo}>
+              <Link to={"/"} className={styles.logo}>
                 <img src={logo1} alt="Celeris" />
               </Link>
               <ul className={`${styles.navList}`}>

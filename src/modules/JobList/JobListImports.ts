@@ -1,5 +1,5 @@
-import { ColumnDef } from '@tanstack/react-table';
-import fileUploads from '../../services/fileuploads.json';
+import { ColumnDef } from "@tanstack/react-table";
+import fileUploads from "../../services/fileuploads.json";
 export type Person = {
   name: string;
   age: number;
@@ -7,52 +7,52 @@ export type Person = {
 };
 export const filterInputs = [
   {
-    label: 'This month',
-    type: 'select',
-    value: ['Electronics', 'Books', 'Clothing'],
+    label: "This month",
+    type: "select",
+    value: ["Electronics", "Books", "Clothing"],
   },
-  { label: 'Status', type: 'select', value: ['Apple', 'Samsung', 'Sony'] },
+  { label: "Status", type: "select", value: ["Apple", "Samsung", "Sony"] },
   {
-    label: 'File Type',
-    type: 'select',
-    value: ['Under $50', '$50 to $100', 'Above $100'],
+    label: "File Type",
+    type: "select",
+    value: ["Under $50", "$50 to $100", "Above $100"],
   },
   {
-    label: 'File Name',
-    placeholder: 'File Name',
-    type: 'input',
+    label: "File Name",
+    placeholder: "File Name",
+    type: "input",
     value: [],
   },
 ];
 export const columns: ColumnDef<any>[] = [
   {
-    header: () => '#',
-    accessorKey: 'id',
+    header: () => "#",
+    accessorKey: "id",
   },
   {
-    header: () => 'Analysis ID',
-    accessorKey: 'analysis id',
+    header: () => "Analysis ID",
+    accessorKey: "analysis id",
   },
   {
-    header: () => 'File Name',
-    accessorKey: 'file name',
+    header: () => "File Name",
+    accessorKey: "file name",
   },
   {
-    header: () => 'Status',
-    accessorKey: 'status',
+    header: () => "Status",
+    accessorKey: "status",
     cell: (value) => value.getValue(),
   },
   {
-    header: () => 'File Type',
-    accessorKey: 'file type',
+    header: () => "File Type",
+    accessorKey: "file type",
   },
   {
-    header: () => 'Creation Date',
-    accessorKey: 'creation date',
+    header: () => "Creation Date",
+    accessorKey: "creation date",
   },
   {
-    header: () => 'Uploaded By',
-    accessorKey: 'uploaded by',
+    header: () => "Uploaded By",
+    accessorKey: "uploaded by",
   },
 ];
 

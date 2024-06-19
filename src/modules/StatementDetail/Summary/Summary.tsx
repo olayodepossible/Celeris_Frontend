@@ -1,65 +1,65 @@
-import './Summary.css';
-import InfoCard, { IInfo } from '../../../shared/Card/InfoCard/InfoCard';
-import Charts, { ChartType } from '../../../shared/Charts/Charts';
+import "./Summary.css";
+import InfoCard, { IInfo } from "../../../shared/Card/InfoCard/InfoCard";
+import Charts, { ChartType } from "../../../shared/Charts/Charts";
 import {
   barChartData,
   barChartoptions,
   lineChartData,
   lineChartoptions,
-} from './SummaryImports';
-import useChartQuery from '../../../utils/customHooks/UseChartQuery';
-import { useQuery } from 'react-query';
-import { useParams } from 'react-router';
-import { getStatementDetails } from '../../../services/axios/getRequest';
-import { Fragment } from 'react/jsx-runtime';
-import Loader from '../../../shared/Loader/Loader';
+} from "./SummaryImports";
+import useChartQuery from "../../../utils/customHooks/UseChartQuery";
+import { useQuery } from "react-query";
+import { useParams } from "react-router";
+import { getStatementDetails } from "../../../services/axios/getRequest";
+import { Fragment } from "react/jsx-runtime";
+import Loader from "../../../shared/Loader/Loader";
 
 const Summary = () => {
   const { labels, datas } = useChartQuery();
   const { id } = useParams();
 
-  const { isLoading, data, isError } = useQuery(['statement-details', id], () =>
+  const { isLoading, data, isError } = useQuery(["statement-details", id], () =>
     getStatementDetails(id as string),
   );
   const details = data?.data;
 
   const infos: IInfo[] = [
     {
-      title: 'Average Salary',
-      amount: '200,000.00',
-      color: '#207EDF',
+      title: "Average Salary",
+      amount: "200,000.00",
+      color: "#207EDF",
     },
     {
-      title: 'Lowest Salary',
-      amount: '1,205,867.621',
-      color: '#F84444',
+      title: "Lowest Salary",
+      amount: "1,205,867.621",
+      color: "#F84444",
     },
     {
-      title: 'Highest Salary',
-      amount: '208,564,501.22',
-      color: '#C607E5',
+      title: "Highest Salary",
+      amount: "208,564,501.22",
+      color: "#C607E5",
     },
     {
-      title: 'Last Salary',
-      amount: '208,564,501.22',
-      color: '#078431',
+      title: "Last Salary",
+      amount: "208,564,501.22",
+      color: "#078431",
     },
   ];
   const infos1: IInfo[] = [
     {
-      title: 'Opening Balance',
-      amount: details ? details.opening_balance : '',
-      color: '1,205,867.621',
+      title: "Opening Balance",
+      amount: details ? details.opening_balance : "",
+      color: "1,205,867.621",
     },
     {
-      title: 'Closing Balance',
-      amount: details ? details.closing_balance : '',
-      color: '#F84444',
+      title: "Closing Balance",
+      amount: details ? details.closing_balance : "",
+      color: "#F84444",
     },
     {
-      title: 'Number of Transactions',
-      amount: '507',
-      color: '#C607E5',
+      title: "Number of Transactions",
+      amount: "507",
+      color: "#C607E5",
     },
   ];
   if (isLoading) {

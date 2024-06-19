@@ -1,12 +1,12 @@
-import './Summary.css';
-import InfoCard, { IInfo } from '../../../shared/Card/InfoCard/InfoCard';
-import Charts, { ChartType } from '../../../shared/Charts/Charts';
+import "./Summary.css";
+import InfoCard, { IInfo } from "../../../shared/Card/InfoCard/InfoCard";
+import Charts, { ChartType } from "../../../shared/Charts/Charts";
 import {
   barChartData,
   lineChartData,
   lineChartoptions,
-} from './SummaryImports';
-import useChartQuery from '../../../utils/customHooks/UseChartQuery';
+} from "./SummaryImports";
+import useChartQuery from "../../../utils/customHooks/UseChartQuery";
 
 const Summary = () => {
   const { labels, datas } = useChartQuery();
@@ -14,51 +14,51 @@ const Summary = () => {
   // remove this dummy data start
   const now = new Date();
   const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, '0');
-  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
   const formattedDate = `${year}-${month}-${day}`;
   // remove this dummy data end
 
   const infos: IInfo[] = [
     {
-      title: 'Average Salary',
-      amount: '200,000.00',
-      color: '#207EDF',
+      title: "Average Salary",
+      amount: "200,000.00",
+      color: "#207EDF",
     },
     {
-      title: 'Lowest Salary',
-      amount: '1,205,867.621',
-      color: '#F84444',
+      title: "Lowest Salary",
+      amount: "1,205,867.621",
+      color: "#F84444",
     },
     {
-      title: 'Highest Salary',
-      amount: '208,564,501.22',
-      color: '#C607E5',
+      title: "Highest Salary",
+      amount: "208,564,501.22",
+      color: "#C607E5",
     },
     {
-      title: 'Last Salary',
-      amount: '208,564,501.22',
-      color: '#078431',
+      title: "Last Salary",
+      amount: "208,564,501.22",
+      color: "#078431",
     },
     {
-      title: 'Average Salary',
-      amount: '200,000.00',
-      color: '#207EDF',
+      title: "Average Salary",
+      amount: "200,000.00",
+      color: "#207EDF",
     },
     {
-      title: 'Lowest Salary',
-      amount: '1,205,867.621',
-      color: '#F84444',
+      title: "Lowest Salary",
+      amount: "1,205,867.621",
+      color: "#F84444",
     },
     {
-      title: 'Highest Salary',
-      amount: '208,564,501.22',
-      color: '#C607E5',
+      title: "Highest Salary",
+      amount: "208,564,501.22",
+      color: "#C607E5",
     },
     {
-      title: 'Last Salary',
-      amount: '208,564,501.22',
-      color: '#078431',
+      title: "Last Salary",
+      amount: "208,564,501.22",
+      color: "#078431",
     },
   ];
 

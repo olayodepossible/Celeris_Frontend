@@ -1,28 +1,28 @@
-import homelogo from '../../assets/logos/home.svg';
-import joblistlogo from '../../assets/logos/barchar.svg';
+import homelogo from "../../assets/logos/home.svg";
+import joblistlogo from "../../assets/logos/barchar.svg";
 
 export const links = [
   {
     icon: homelogo,
-    name: 'Dashboard',
-    path: '/dashboard',
+    name: "Dashboard",
+    path: "/dashboard",
   },
-  { icon: joblistlogo, name: 'Job Lists', path: '/jobList' },
-  { icon: joblistlogo, name: 'About', path: '/about' },
-  { icon: joblistlogo, name: 'Contact', path: '/contact' },
+  { icon: joblistlogo, name: "Job Lists", path: "/jobList" },
+  { icon: joblistlogo, name: "About", path: "/about" },
+  { icon: joblistlogo, name: "Contact", path: "/contact" },
 ];
 
 export const filterInputs = [
   {
-    label: 'Product Type',
-    type: 'select',
-    value: ['Electronics', 'Books', 'Clothing'],
+    label: "Product Type",
+    type: "select",
+    value: ["Electronics", "Books", "Clothing"],
   },
-  { label: 'Result Type', type: 'select', value: ['Apple', 'Samsung', 'Sony'] },
+  { label: "Result Type", type: "select", value: ["Apple", "Samsung", "Sony"] },
   {
-    label: 'Period',
-    type: 'select',
-    value: ['Under $50', '$50 to $100', 'Above $100'],
+    label: "Period",
+    type: "select",
+    value: ["Under $50", "$50 to $100", "Above $100"],
   },
 ];
 

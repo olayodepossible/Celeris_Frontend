@@ -1,31 +1,34 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 interface ButtonProps {
-  rounded?: 'true' | 'false';
-  variant?: 'primary' | 'secondary' | 'dark';
+  rounded?: "true" | "false";
+  variant?: "primary" | "secondary" | "dark";
 }
 export const CelerisBtn = styled.button<ButtonProps>`
   background: ${(props) => {
-    if (props.variant === 'primary') {
-      return '#207edf';
-    } else if (props.variant === 'secondary') {
-      return '#fff';
+    if (props.variant === "primary") {
+      return "#207edf";
+    } else if (props.variant === "secondary") {
+      return "#fff";
     } else {
-      return '#060b26';
+      return "#060b26";
     }
   }};
-  border-radius: ${(props) => (props.rounded ? '80px' : '10px')};
+  border-radius: ${(props) => (props.rounded ? "80px" : "10px")};
   color: ${(props) => {
-    if (props.variant === 'primary' || props.variant === 'dark') {
-      return '#fff';
+    if (props.variant === "primary" || props.variant === "dark") {
+      return "#fff";
     } else {
-      return '#207edf';
+      return "#207edf";
     }
   }};
   border: none;
-  padding: ${(props) => (props.rounded === 'true' ? '17px 32px' : '10px 15px')};
+  padding: ${(props) => (props.rounded === "true" ? "17px 32px" : "10px 15px")};
   width: fit-content;
-  font-family: 'DM Sans';
-  font-size: '16px';
+  font-family: "DM Sans";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: "16px";
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 1.600000023841858px;
@@ -37,7 +40,7 @@ export const CelerisBtn = styled.button<ButtonProps>`
 `;
 
 export const CelerisPrimarySubmitBtn = styled(CelerisBtn).attrs({
-  type: 'submit',
+  type: "submit",
 })`
   padding: 11px 0;
 `;

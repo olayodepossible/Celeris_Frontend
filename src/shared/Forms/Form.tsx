@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import './Form.css';
-import { CelerisBtn } from '../Button';
+import React, { useState, useEffect } from "react";
+import "./Form.css";
+import { CelerisBtn } from "../Button";
 
 export interface IInputProps {
   label: string;
@@ -65,11 +65,11 @@ const Form = ({
       <div className={`filterOption ${styles}`}>
         {inputs.map((input, index) => (
           <div className="selectWrapper" key={index}>
-            {input.type === 'select' ? (
+            {input.type === "select" ? (
               <select
                 required={input.isRequired}
                 onChange={(e) => handleChange(input.label, e.target.value)}
-                value={selectedOptions[input.label] || ''}
+                value={selectedOptions[input.label] || ""}
               >
                 <option value="">{input.label}</option>
                 {input.value.map((option, idx) => (
@@ -95,7 +95,7 @@ const Form = ({
           onClick={handleApplyFilters}
           disabled={!isFormValid}
         >
-          {button ? button.text : 'Apply Filters'}
+          {button ? button.text : "Apply Filters"}
         </CelerisBtn>
       </div>
     );
@@ -104,12 +104,12 @@ const Form = ({
     <div className={`form ${styles}`}>
       {inputs.map((input, index) => (
         <React.Fragment key={index}>
-          {input.type === 'select' ? (
+          {input.type === "select" ? (
             <div className="selectWrapper w-100" key={index}>
               <div className="form-group">
                 <label htmlFor="fileType">
-                  {input.label}{' '}
-                  {input.isRequired ? <span className="star">*</span> : ''}
+                  {input.label}{" "}
+                  {input.isRequired ? <span className="star">*</span> : ""}
                 </label>
                 <select
                   required={input.isRequired}
@@ -117,7 +117,7 @@ const Form = ({
                     handleChange(input.label, e.target.value);
                     handleApplyFilters();
                   }}
-                  value={selectedOptions[input.label] || ''}
+                  value={selectedOptions[input.label] || ""}
                 >
                   <option value="">{input.label}</option>
                   {input.value.map((option, idx) => (
@@ -131,8 +131,8 @@ const Form = ({
           ) : (
             <div className="form-group" key={input.label}>
               <label htmlFor={input.label}>
-                {input.label}{' '}
-                {input.isRequired ? <span className="star">*</span> : ''}
+                {input.label}{" "}
+                {input.isRequired ? <span className="star">*</span> : ""}
               </label>
               <input
                 type={input.type}

@@ -1,9 +1,9 @@
-import { useQuery } from 'react-query';
-import { getTableData } from '../../services/axios/getRequest';
+import { useQuery } from "react-query";
+import { getTableData } from "../../services/axios/getRequest";
 
 function useTableQuery() {
   const { isLoading, data, isError, error } = useQuery(
-    'tableData',
+    "tableData",
     getTableData,
   );
   console.log(data?.data);

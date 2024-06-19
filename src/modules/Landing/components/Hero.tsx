@@ -1,6 +1,6 @@
-import styles from '../Landing.module.css';
-import Imports from '../Landing.imports';
-import { CelerisBtn } from '../../../shared/Button';
+import styles from "../Landing.module.css";
+import Imports from "../Landing.imports";
+import { CelerisBtn } from "../../../shared/Button";
 
 const Hero = () => {
   return (

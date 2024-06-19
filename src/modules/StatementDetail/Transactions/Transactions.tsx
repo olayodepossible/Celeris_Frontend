@@ -1,5 +1,5 @@
-import Table from '../../../shared/Table/Table';
-import { columns, data } from './TransactionsImports';
+import Table from "../../../shared/Table/Table";
+import { columns, data } from "./TransactionsImports";
 
 const Transactions = () => {
   return (

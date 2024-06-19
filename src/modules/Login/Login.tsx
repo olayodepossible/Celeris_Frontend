@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import styles from './Login.module.css';
-import logo from '../../assets/logos/Logo.png';
-import { CelerisBtn } from '../../shared/Button';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import styles from "./Login.module.css";
+import logo from "../../assets/logos/Logo.png";
+import { CelerisBtn } from "../../shared/Button";
+import { useNavigate } from "react-router-dom";
 
 interface IStateProps {
   email?: string;
@@ -13,18 +13,18 @@ interface IStateProps {
 const Login = () => {
   const navigate = useNavigate();
   const [login, setLogin] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   } as IStateProps);
   const onSubmit = (e: any) => {
     e.preventDefault();
     console.log(login);
-    const mockAccessToken = 'mockAccessToken123';
-    const mockRefreshToken = 'mockRefreshToken123';
+    const mockAccessToken = "mockAccessToken123";
+    const mockRefreshToken = "mockRefreshToken123";
 
-    localStorage.setItem('accessToken', mockAccessToken);
-    localStorage.setItem('refreshToken', mockRefreshToken);
-    navigate('/dashboard');
+    localStorage.setItem("accessToken", mockAccessToken);
+    localStorage.setItem("refreshToken", mockRefreshToken);
+    navigate("/dashboard");
   };
   return (
     <div className={styles.login}>

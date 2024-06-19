@@ -1,8 +1,8 @@
 const formatNumber = (num: number): string => {
   if (num >= 1000000) {
-    return (num / 1000000).toFixed(1) + 'M';
+    return (num / 1000000).toFixed(1) + "M";
   } else if (num >= 1000) {
-    return (num / 1000).toFixed(1) + 'K';
+    return (num / 1000).toFixed(1) + "K";
   }
   return num.toString();
 };
@@ -21,7 +21,7 @@ export const barChartoptions = {
     },
     legend: {
       display: false,
-      position: 'right' as const,
+      position: "right" as const,
     },
   },
   scales: {
@@ -45,24 +45,24 @@ export const barChartoptions = {
   },
   datalabels: {
     display: true,
-    align: 'top',
-    anchor: 'top',
+    align: "top",
+    anchor: "top",
     formatter: (value: number) => formatNumber(value),
     font: {
-      weight: 'bold',
+      weight: "bold",
     },
   },
   // indexAxis:"y"
 };
 export const barChartData = {
-  labels: ['Credit', 'Debit'],
+  labels: ["Credit", "Debit"],
   datasets: [
     {
-      label: 'dataset 1',
+      label: "dataset 1",
       data: [4200000, 1200000],
-      borderColor: 'transparent',
+      borderColor: "transparent",
       fill: true,
-      backgroundColor: '#207EDF',
+      backgroundColor: "#207EDF",
       // borderRadius:100,
     },
   ],
@@ -81,7 +81,7 @@ export const lineChartoptions = {
     },
     legend: {
       display: false,
-      position: 'right' as const,
+      position: "right" as const,
     },
   },
   scales: {
@@ -109,13 +109,13 @@ export const lineChartData = {
   labels,
   datasets: [
     {
-      label: 'dataset 1',
+      label: "dataset 1",
       data: [4200, 450, 2450, 3650, 2450, 3650, 2400, 3350, 3050],
-      borderColor: '#207edf',
+      borderColor: "#207edf",
       borderWidth: 5,
       fill: true,
       backgroundColor: (context: any) => {
-        const bgColor = ['rgba(32, 126, 223, 0.5)', 'rgba(217, 217, 217, 0)'];
+        const bgColor = ["rgba(32, 126, 223, 0.5)", "rgba(217, 217, 217, 0)"];
         if (!context.chart.chartArea) {
           return;
         }
@@ -131,7 +131,7 @@ export const lineChartData = {
         console.log(data);
         return gradientBg;
       },
-      pointBackgroundColor: 'transparent',
+      pointBackgroundColor: "transparent",
       // pointBorderColor: 'transparent',
       pointRadius: 0,
       tension: 0.4,

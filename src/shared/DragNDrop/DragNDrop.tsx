@@ -1,6 +1,6 @@
-import { useRef, useState } from 'react';
-import uploadLogo from '../../assets/logos/Upload icon.png';
-import './DragNDrop.css';
+import { useRef, useState } from "react";
+import uploadLogo from "../../assets/logos/Upload icon.png";
+import "./DragNDrop.css";
 
 interface IDragNDrop {
   onDrop: (files: any) => void;
@@ -13,10 +13,10 @@ export default function DragNDrop({ onDrop }: IDragNDrop) {
 
   function handleChange(e: any) {
     e.preventDefault();
-    console.log('File has been added');
+    console.log("File has been added");
     if (e.target.files && e.target.files[0]) {
       console.log(e.target.files[0], files);
-      for (let i = 0; i < e.target.files['length']; i++) {
+      for (let i = 0; i < e.target.files["length"]; i++) {
         setFiles((prevState: any) => [...prevState, e.target.files[i]]);
       }
       onDrop(e.target.files[0]);
@@ -28,7 +28,7 @@ export default function DragNDrop({ onDrop }: IDragNDrop) {
     e.stopPropagation();
     setDragActive(false);
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      for (let i = 0; i < e.dataTransfer.files['length']; i++) {
+      for (let i = 0; i < e.dataTransfer.files["length"]; i++) {
         setFiles((prevState: any) => [...prevState, e.dataTransfer.files[i]]);
       }
       onDrop(e.target.files[0]);
@@ -54,7 +54,7 @@ export default function DragNDrop({ onDrop }: IDragNDrop) {
   }
 
   function openFileExplorer() {
-    inputRef.current.value = '';
+    inputRef.current.value = "";
     inputRef.current.click();
   }
 
@@ -63,7 +63,7 @@ export default function DragNDrop({ onDrop }: IDragNDrop) {
       <img src={uploadLogo} alt="" />
       <div
         className={`form ${
-          dragActive ? 'bg-blue-400' : 'bg-blue-100'
+          dragActive ? "bg-blue-400" : "bg-blue-100"
         }  p-4 w-1/3 rounded-lg  min-h-[10rem] text-center flex flex-col items-center justify-center`}
         onDragEnter={handleDragEnter}
         onSubmit={(e) => e.preventDefault()}
@@ -82,7 +82,7 @@ export default function DragNDrop({ onDrop }: IDragNDrop) {
         />
 
         <p>
-          Drag & Drop files or{' '}
+          Drag & Drop files or{" "}
           <span
             className="font-bold text-blue-600 cursor-pointer"
             onClick={openFileExplorer}

@@ -1,37 +1,37 @@
-import styles from '../Landing.module.css';
-import Imports from '../Landing.imports';
-import { CelerisBtn } from '../../../shared/Button';
-import Form, { IInputProps } from '../../../shared/Forms/Form';
-import { useState } from 'react';
+import styles from "../Landing.module.css";
+import Imports from "../Landing.imports";
+import { CelerisBtn } from "../../../shared/Button";
+import Form, { IInputProps } from "../../../shared/Forms/Form";
+import { useState } from "react";
 
 const ConnectWithUs = () => {
   const [inputvalues, setInputvalues] = useState<{ [key: string]: string }>({});
   const inputs: IInputProps[] = [
     {
-      label: 'Name',
-      type: 'text',
-      placeholder: 'Full name',
+      label: "Name",
+      type: "text",
+      placeholder: "Full name",
       isRequired: true,
       value: [],
     },
     {
-      label: 'Business email',
-      type: 'email',
-      placeholder: 'myname@company.com',
+      label: "Business email",
+      type: "email",
+      placeholder: "myname@company.com",
       isRequired: true,
       value: [],
     },
     {
-      label: 'Company',
-      type: 'text',
-      placeholder: 'Company Name',
+      label: "Company",
+      type: "text",
+      placeholder: "Company Name",
       isRequired: true,
       value: [],
     },
     {
-      label: 'Please share anything that will help prepare for our meeting',
-      type: 'text',
-      placeholder: '',
+      label: "Please share anything that will help prepare for our meeting",
+      type: "text",
+      placeholder: "",
       isRequired: true,
       value: [],
     },

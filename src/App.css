@@ -119,3 +119,6 @@ body>div.ReactModalPortal>div>div::-webkit-scrollbar {
 .MuiTabs-scrollButtons{
   opacity: 0;
 }
+a.active {
+  background: #1A1F37 !important;
+}
