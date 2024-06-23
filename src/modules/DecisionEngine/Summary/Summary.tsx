@@ -7,9 +7,10 @@ import {
   lineChartoptions,
 } from "./SummaryImports";
 import useChartQuery from "../../../utils/customHooks/UseChartQuery";
+import Loader from "../../../shared/Loader/Loader";
 
 const Summary = () => {
-  const { labels, datas } = useChartQuery();
+  const { labels, datas, isLoading } = useChartQuery();
 
   // remove this dummy data start
   const now = new Date();
@@ -61,6 +62,9 @@ const Summary = () => {
       color: "#078431",
     },
   ];
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <>

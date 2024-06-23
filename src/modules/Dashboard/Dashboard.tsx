@@ -19,6 +19,7 @@ import {
 import { CelerisBtn } from "../../shared/Button";
 import DragNDrop from "../../shared/DragNDrop/DragNDrop";
 import useChartQuery from "../../utils/customHooks/UseChartQuery";
+import Loader from "../../shared/Loader/Loader";
 
 Modal.setAppElement("#root");
 const Dashboard = () => {
@@ -69,7 +70,9 @@ const Dashboard = () => {
                   Total Job Volume: <span>1,075</span>
                 </p>
                 {isLoading === true && (
-                  <div className="text-center fs-1 text-bold">Loading.....</div>
+                  <div className="text-center fs-1">
+                    <Loader />
+                  </div>
                 )}
                 {isLoading === false && !isError && (
                   <Charts

@@ -52,20 +52,22 @@ const Summary = () => {
           <div className="insight mb-3">
             <h2 className="heading">Credit Insight</h2>
             <div className="subheading">Last updated: Jan 16, 2024</div>
-            <Chart
-              options={radialChartoptions.options}
-              series={[87]}
-              type="radialBar"
-              width="300"
-            />
-            {/* <ProgressBar progress={85} isCircle /> */}
-            <h3 className="mb-5 text-center">very good</h3>
+            <div className="w-100">
+              <Chart
+                options={radialChartoptions.options}
+                series={[87]}
+                type="radialBar"
+                width="300"
+              />
+
+              <h3 className="mb-3 v-good">very good</h3>
+            </div>
             <div className="history row row-cols-md-2 row-cols-1">
               {infos.length &&
                 infos.map((hist, idx) => {
                   return (
                     <div key={idx} className="d-flex justify-content-between">
-                      <div className="cardContent">
+                      <div className="creditCardContent">
                         <div className="title">{hist.title}</div>
                         <div className="subtitle">{hist.subtitle}</div>
                       </div>
@@ -77,7 +79,7 @@ const Summary = () => {
         </div>
 
         <div className="col-7 d-flex flex-column align-items-center justify-content-between">
-          <div className="detailsCard d-flex justify-content-between w-100">
+          <div className="detailsCard d-flex justify-content-between w-100 p-3">
             <div>
               <div>
                 <span className="content">

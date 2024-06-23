@@ -1,4 +1,4 @@
-.cardContent {
+.creditCardContent {
     width: 100%;
     padding: 15px 10px;
     margin-bottom: 18px;
@@ -7,7 +7,7 @@
     border-left: 12px solid #207EDF;
 }
 
-.cardContent>.title {
+.creditCardContent>.title {
     font-family: 'Poppins';
     font-size: 16px;
     font-weight: 600;
@@ -16,7 +16,7 @@
     margin-bottom: 7px;
 }
 
-.cardContent>.subtitle {
+.creditCardContent>.subtitle {
     font-family: 'Poppins';
     font-size: 13px;
     font-weight: 600;
@@ -49,11 +49,12 @@
     font-family: 'Poppins';
     padding-left: 5%;
     padding-right: 5%;
-    border:none;
+    border: none;
     border-right: 2px solid #E9E9E9;
 }
-.loanDetails div:last-child{
-    border:none;
+
+.loanDetails div:last-child {
+    border: none;
 }
 
 .loanDetails div>.heading {
@@ -77,4 +78,14 @@
     font-weight: 500;
     line-height: 38.46px;
     color: #1A1B2F;
+}
+
+.v-good {
+    width: 84%;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+    text-align: center;
+
 }

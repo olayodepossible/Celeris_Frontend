@@ -70,6 +70,7 @@ export const radialChartoptions = {
   chart: {
     height: 280,
     type: "radialBar",
+    width: "100%",
   },
 
   series: [67],
@@ -95,9 +96,9 @@ export const radialChartoptions = {
         },
         dataLabels: {
           name: {
+            show: false,
             offsetY: -10,
             color: "#000",
-            display: "none",
             fontSize: "13px",
           },
           value: {
@@ -108,14 +109,12 @@ export const radialChartoptions = {
         },
       },
     },
-    labels: ["jksdf"],
     fill: {
       type: "gradient",
       gradient: {
         shade: "dark",
         type: "vertical",
         gradientToColors: ["#840909"],
-        // background: linear-gradient(268.59deg, #F4CF4B -2.9%, #E66262 40.86%, #840909 98.8%);
         stops: [0, 50],
       },
     },

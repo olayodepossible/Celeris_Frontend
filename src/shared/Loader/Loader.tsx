@@ -1,11 +1,19 @@
 import "./Loader.css";
+import { TailSpin } from "react-loader-spinner";
 
 const Loader = () => {
   return (
     <div className="loader">
-      <div className="spinner-border text-primary" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </div>
+      <TailSpin
+        visible={true}
+        height="80"
+        width="80"
+        color="#333333"
+        ariaLabel="tail-spin-loading"
+        radius="1"
+        wrapperStyle={{}}
+        wrapperClass=""
+      />
     </div>
   );
 };
