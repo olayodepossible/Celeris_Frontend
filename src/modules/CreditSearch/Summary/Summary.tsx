@@ -1,9 +1,13 @@
 import "./Summary.css";
-// import InfoCard, { IInfo } from '../../../shared/Card/InfoCard/InfoCard';
-
-import ProgressBar from "../../../shared/ProgressBar/ProgressBar";
+import Chart from "react-apexcharts";
+// import ProgressBar from "../../../shared/ProgressBar/ProgressBar";
 import Charts, { ChartType } from "../../../shared/Charts/Charts";
-import { barChartData, barChartData2, barChartoptions } from "./SummaryImports";
+import {
+  barChartData,
+  barChartData2,
+  barChartoptions,
+  radialChartoptions,
+} from "./SummaryImports";
 
 const Summary = () => {
   const infos: { title: string; subtitle: string }[] = [
@@ -48,7 +52,14 @@ const Summary = () => {
           <div className="insight mb-3">
             <h2 className="heading">Credit Insight</h2>
             <div className="subheading">Last updated: Jan 16, 2024</div>
-            <ProgressBar progress={85} isCircle />
+            <Chart
+              options={radialChartoptions.options}
+              series={[87]}
+              type="radialBar"
+              width="300"
+            />
+            {/* <ProgressBar progress={85} isCircle /> */}
+            <h3 className="mb-5 text-center">very good</h3>
             <div className="history row row-cols-md-2 row-cols-1">
               {infos.length &&
                 infos.map((hist, idx) => {

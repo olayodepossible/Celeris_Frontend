@@ -1,5 +1,5 @@
 import { Chart as ChartJS, registerables } from "chart.js";
-import { Bar, Line, Doughnut, Scatter } from "react-chartjs-2";
+import { Bar, Line, Doughnut, PolarArea } from "react-chartjs-2";
 
 ChartJS.register(...registerables);
 
@@ -11,7 +11,7 @@ export enum ChartType {
   PolarArea = "polarArea",
   Radar = "radar",
   Bubble = "bubble",
-  Scatter = "scatter",
+  // Polar = "polarArea",
 }
 interface IChartProps {
   type: ChartType;
@@ -43,7 +43,7 @@ const Charts = ({ type, data, options, plugins, ...rest }: IChartProps) => {
   } else {
     return (
       <div>
-        <Scatter data={data} {...rest} />
+        <PolarArea data={data} options={options} plugins={plugins} {...rest} />
       </div>
     );
   }
