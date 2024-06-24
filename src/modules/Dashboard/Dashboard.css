@@ -109,11 +109,20 @@
     background: #D9D9D980;
 }
 
-.modal {
+.loadingModal, .successModal{
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 500px;
+    flex-direction: column;
+    min-width: 400px;
+    height: 85vh;
+}
+.loadingModal > .loading{
+    max-height: 250px;
+}
+
+.successModal > div{
+    gap: 15px;
 }
 
 .analysisForm {
