@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Login.module.css";
 import logo from "../../assets/logos/Logo.png";
 import { CelerisBtn } from "../../shared/Button";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface IStateProps {
   email?: string;
@@ -29,7 +29,7 @@ const Login = () => {
   return (
     <div className={styles.login}>
       <div className={styles.loginFormContainer}>
-        <img src={logo} alt="Celeris" className="img-responsive" />
+        <Link to="/"><img src={logo} alt="Celeris" className="img-responsive" /></Link>
         <h2>Welcome Back!</h2>
         <p>Login into your account</p>
         <form onSubmit={onSubmit} className={styles.loginForm}>

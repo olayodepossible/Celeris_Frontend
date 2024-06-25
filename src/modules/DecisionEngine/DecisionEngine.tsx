@@ -38,6 +38,7 @@ const DecisionEngine = () => {
             <Tab label="CRC" value="3" />
             <Tab label="First Central" value="4" />
           </TabList>
+          <div className="downloadBtn">
           <CelerisBtn variant="primary">
             <svg
               width="20"
@@ -53,6 +54,7 @@ const DecisionEngine = () => {
             </svg>
             <span className="ms-1">DOWNLOAD REPORT</span>
           </CelerisBtn>
+          </div>
         </Box>
         <TabPanel value="1">
           <Summary />

@@ -14,6 +14,10 @@
   max-width: 742px;
 }
 
+.submit, .getStated {
+  max-width: 185px;
+}
+
 .analysisPara {
   font-size: 18px;
   font-weight: 400;
@@ -383,7 +387,7 @@
     padding: 30px 35px;
   }
 
-  .company{
+  .company {
     flex-wrap: wrap-reverse;
   }
 

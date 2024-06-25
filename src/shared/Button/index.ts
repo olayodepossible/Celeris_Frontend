@@ -22,12 +22,9 @@ export const CelerisBtn = styled.button<ButtonProps>`
     }
   }};
   border: none;
-  padding: ${(props) => (props.rounded === "true" ? "17px 32px" : "10px 15px")};
-  width: fit-content;
+  padding:  10px 15px;
+  width: 100%;
   font-family: "DM Sans";
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: "16px";
   font-weight: 700;
   line-height: 16px;

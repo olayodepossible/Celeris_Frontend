@@ -1,6 +1,7 @@
 import styles from "../Landing.module.css";
 import Imports from "../Landing.imports";
 import { CelerisBtn } from "../../../shared/Button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -13,9 +14,13 @@ const Hero = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla
           suspendisse tortor aenean dis placerat.
         </p>
-        <CelerisBtn variant="primary" rounded="true">
-          GET STARTED
-        </CelerisBtn>
+        <div className={styles.getStated}>
+          <Link to={'/'}>
+            <CelerisBtn variant="primary" rounded="true">
+              GET STARTED
+            </CelerisBtn>
+          </Link>
+        </div>
       </div>
 
       <img

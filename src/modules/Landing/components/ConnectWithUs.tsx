@@ -56,14 +56,16 @@ const ConnectWithUs = () => {
             isFilter={false}
             styles="d-flex flex-column"
           />
-          <div className="d-flex align-items-center justify-content-center w-100">
-            <CelerisBtn
-              variant="primary"
-              rounded="true"
-              onClick={() => console.log(inputvalues)}
-            >
-              Submit
-            </CelerisBtn>
+          <div className="d-flex align-items-center justify-content-center">
+            <div className={styles.submit}>
+              <CelerisBtn
+                variant="primary"
+                rounded="true"
+                onClick={() => console.log(inputvalues)}
+              >
+                Submit
+              </CelerisBtn>
+            </div>
           </div>
         </form>
       </div>

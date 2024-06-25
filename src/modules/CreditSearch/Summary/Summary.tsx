@@ -50,8 +50,10 @@ const Summary = () => {
       <div className="row ">
         <div className="col-4 d-flex flex-column">
           <div className="insight mb-3">
-            <h2 className="heading">Credit Insight</h2>
-            <div className="subheading">Last updated: Jan 16, 2024</div>
+            <div className="creditHeader">
+              <h2 className="heading">Credit Insight</h2>
+              <div className="subheading">Last updated: Jan 16, 2024</div>
+            </div>
             <div className="w-100">
               <Chart
                 options={radialChartoptions.options}

@@ -46,7 +46,9 @@ const JobList = () => {
                 text: "SUBMIT",
               }}
             />
-            <CelerisBtn variant="dark">ADD NEW JOB</CelerisBtn>
+            <div className="addNewJob">
+              <CelerisBtn variant="dark">ADD NEW JOB</CelerisBtn>
+            </div>
           </div>
           <Table
             columns={columns}

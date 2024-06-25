@@ -13,9 +13,11 @@ const Explore = () => {
           Discover the transformative potential of AI-driven insights in
           streamlining operations and revolutionizing your institution.
         </p>
-        <CelerisBtn variant="secondary" rounded="true">
-          Request Demo
-        </CelerisBtn>
+        <div className={styles.submit}>
+          <CelerisBtn variant="secondary" rounded="true">
+            Request Demo
+          </CelerisBtn>
+        </div>
       </div>
       <div>
         <img

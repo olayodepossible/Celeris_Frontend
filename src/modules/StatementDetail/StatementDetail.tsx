@@ -46,6 +46,7 @@ const StatementDetail = () => {
             <Tab label="Behavioral" value="3" />
             <Tab label="Transactions" value="4" />
           </TabList>
+          <div className="downloadBtn">
           <CelerisBtn variant="primary">
             <svg
               width="20"
@@ -59,8 +60,9 @@ const StatementDetail = () => {
                 fill="white"
               />
             </svg>
-            <span>DOWNLOAD REPORT</span>
+            <span className="ms-1">DOWNLOAD REPORT</span>
           </CelerisBtn>
+          </div>
         </Box>
         <TabPanel value="1">
           <Summary />
