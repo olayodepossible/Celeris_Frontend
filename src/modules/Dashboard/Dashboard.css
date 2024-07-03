@@ -1,0 +1,171 @@
+.content>.header {
+    margin-bottom: 52px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.6px;
+}
+
+.filters {
+    margin-bottom: 63px;
+}
+
+.charts {
+    border-right: 5px solid #00000080;
+}
+
+.barchart {
+    max-width: 100%;
+    margin-bottom: 73px;
+}
+
+.doughnut {
+    width: 250px;
+    height: 250px;
+}
+
+.barchart>.title,
+.doughnut>.title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: #00000080;
+}
+
+.barchart>.title>span {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    color: #000;
+}
+
+.walletbalance,
+.noofjobs {
+    box-shadow: 2px 2px 5px 2px #0000001A;
+    border-radius: 10px;
+    padding: 43px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noofjobs {
+    box-shadow: none;
+}
+
+.walletbalance>.title,
+.noofjobs>.title {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 18px;
+}
+
+.walletbalance>.balance,
+.noofjobs>.balance {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44.8px;
+    margin-bottom: 57px;
+}
+
+.noofjobs>.balance {
+    margin-bottom: 38px;
+}
+
+.walletbalance>.viewtransaction {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 21px;
+    color: #207EDF;
+    margin-top: 44px;
+}
+
+.options {
+    border-radius: 5px;
+    background: #D9D9D91A;
+    padding: 8px 0;
+    margin-top: 5px;
+}
+
+.options>li {
+    width: 100%;
+}
+
+.options>li>a {
+    width: inherit;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    display: block;
+    text-decoration: none;
+    padding: 5px 18px;
+    color: #000;
+}
+
+.options>li>a:hover {
+    background: #D9D9D980;
+}
+
+.loadingModal, .successModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 400px;
+    height: 85vh;
+}
+.loadingModal > .loading{
+    max-height: 250px;
+}
+
+.successModal > div{
+    gap: 15px;
+}
+
+.analysisForm {
+    padding: 25px;
+}
+
+.analysisForm>.header>.title {
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.file {
+    border-radius: 10px;
+    display: flex;
+    background: #E4E0E080;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 16px;
+}
+
+.file span {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.delete {
+    color: #F84444;
+}
+
+
+@media (max-width: 970px) {
+    .charts {
+        border: none;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .options>li>a {
+        text-align: center;
+    }
+}

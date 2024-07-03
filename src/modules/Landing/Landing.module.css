@@ -1,0 +1,405 @@
+.analysisText {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+
+.analysisH2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 79.99px;
+  letter-spacing: -1px;
+  z-index: 2;
+  max-width: 742px;
+}
+
+.submit, .getStated {
+  max-width: 185px;
+}
+
+.analysisPara {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.imgResponsive {
+  max-width: 625px;
+  margin-left: -160px;
+}
+
+.finance {
+  gap: 34px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 173px;
+  font-family: "DM Sans";
+}
+
+.financeHeader {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14.2px;
+  font-weight: 700;
+}
+
+.insights {
+  margin-bottom: 130px;
+  font-family: "DM Sans";
+  display: flex;
+  flex-direction: column;
+}
+
+.insightsHeading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 55.02px;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.insightsSubheading {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  max-width: 663px;
+  margin-bottom: 95px;
+}
+
+.insights span {
+  align-self: flex-end;
+  margin-right: 100px;
+  margin-top: 78px;
+}
+
+.bigdata {
+  background: #0577FE;
+  color: #fff;
+  padding: 44px 33px 0px;
+  gap: 0px;
+  border-radius: 40px;
+  font-family: "DM Sans";
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bigdata h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+}
+
+.bigdata p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  max-width: 383px;
+  margin-bottom: 75px;
+}
+
+.busImg img {
+  max-width: 579px;
+}
+
+.busImg::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: -1;
+  background-image: url('../../assets/images/expansionBg.png');
+  background-size: 100%;
+}
+
+.busExpansion {
+  max-width: 475px;
+}
+
+.busExpansion>h2 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 55.02px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.busExpansion>p {
+  max-width: 470px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.expansionFeatures {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 17px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 267px;
+}
+
+.expansionFeatures li {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+
+.expansionFeatures p {
+  margin-bottom: 0;
+}
+
+.explore {
+  background: #1A1F37;
+  padding: 100px 150px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 140px;
+}
+
+.exploreContent {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 589px;
+  text-align: left;
+}
+
+.exploreContent>h2 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 55.02px;
+}
+
+.exploreContent>p {
+  max-width: 496px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.explore img {
+  width: 640px;
+  margin-top: -270px;
+  margin-left: -100px;
+  position: absolute;
+}
+
+.feedback {
+  margin-bottom: 200px;
+}
+
+.feedback>h2 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 55.02px;
+  text-align: left;
+  margin-bottom: 40px;
+  margin-left: 20%;
+}
+
+.sliderCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #010D50;
+  gap: 25px;
+  min-width: fit-content !important;
+  max-height: 343px;
+  padding: 65px 50px;
+  border-radius: 40px;
+  opacity: 0.3;
+  color: #fff;
+}
+
+.sliderCard:hover {
+  opacity: 1;
+}
+
+.sliderCard>p {
+  max-width: 468px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.info {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.info img {
+  width: 58px;
+  height: 58px;
+  border-radius: 1000px;
+}
+
+.infoDetails h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.9px;
+  text-align: left;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.infoDetails p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.9px;
+  text-align: left;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.aboutUS {
+  margin-bottom: 385px;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 85px;
+  max-width: 500px;
+}
+
+.aboutContent>h2 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 55.02px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.aboutContent>div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Plus Jakarta Sans", "DM Sans";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: left;
+}
+
+.aboutImg {
+  width: 570px;
+}
+
+.connect {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 335px;
+}
+
+.connect>img {
+  max-width: 527px;
+  max-height: 500px;
+}
+
+.formHeading {
+  max-width: 480px;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: left;
+  margin-bottom: 42px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 27px;
+}
+
+.formGroup label {
+  margin-bottom: 5px;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  text-align: left;
+
+}
+
+.formGroup input,
+.formGroup textarea {
+  border: 1px solid #00000033;
+  border-radius: 5px;
+  outline: none;
+  padding: 12px 24px;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+
+  .imgResponsive,
+  .busImg img,
+  .busImg::before,
+  .explore img,
+  .info img,
+  .aboutImg,
+  .connect>img,
+  img {
+    max-width: 300px;
+  }
+
+  .explore {
+    display: flex;
+    padding: 30px 35px;
+  }
+
+  .company {
+    flex-wrap: wrap-reverse;
+  }
+
+  .explore img {
+    display: none;
+  }
+
+  .connect {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+}
