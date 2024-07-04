@@ -37,7 +37,7 @@ const JobList = () => {
           </TabList>
         </Box>
         <TabPanel value="1">
-          <div className="d-flex flex-lg-row flex-column justify-content-between w-100  mb-3">
+          <div className="d-flex flex-lg-row flex-column justify-content-between w-100 mb-3">
             <Form
               inputs={filterInputs}
               styles="d-flex"
@@ -46,7 +46,7 @@ const JobList = () => {
                 text: "SUBMIT",
               }}
             />
-            <div className="addNewJob">
+            <div className="addNewJob me-4">
               <CelerisBtn variant="dark">ADD NEW JOB</CelerisBtn>
             </div>
           </div>

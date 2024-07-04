@@ -7,7 +7,7 @@ export const columns: ColumnDef<any>[] = [
   },
   {
     header: () => "Transaction Description",
-    accessorKey: "analysis id",
+    accessorKey: "analysis_id",
   },
   {
     header: () => "Type",

@@ -67,7 +67,7 @@ const Summary = () => {
   }
 
   return (
-    <>
+    <div className="decisionSum">
       <div className="row row-cols-lg-2 row-cols-1">
         <div className="customerDetails d-flex flex-column align-items-center">
           <div className="detailsCard mb-3">
@@ -197,7 +197,7 @@ const Summary = () => {
           Number of Salary Payments: <b>23</b>
         </h3>
       </div>
-    </>
+    </div>
   );
 };
 

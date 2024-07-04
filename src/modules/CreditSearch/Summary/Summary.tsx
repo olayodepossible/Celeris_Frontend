@@ -47,20 +47,23 @@ const Summary = () => {
 
   return (
     <>
-      <div className="row ">
-        <div className="col-4 d-flex flex-column">
-          <div className="insight mb-3">
+      <div className="row creditSum">
+        <div className="col-5 d-flex insight flex-column">
+          <div className="mb-3">
             <div className="creditHeader">
               <h2 className="heading">Credit Insight</h2>
               <div className="subheading">Last updated: Jan 16, 2024</div>
             </div>
             <div className="w-100">
+              <div className="raialBar">
               <Chart
                 options={radialChartoptions.options}
                 series={[87]}
                 type="radialBar"
-                width="300"
+                width="200"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
               />
+              </div>
 
               <h3 className="mb-3 v-good">very good</h3>
             </div>
