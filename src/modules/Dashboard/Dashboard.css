@@ -1,7 +1,7 @@
 .content>.header {
     margin-bottom: 52px;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
     line-height: 33.6px;
 }
 
@@ -23,6 +23,13 @@
     height: 250px;
 }
 
+.barchart>.header{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 33.6px;
+    margin-bottom: 5px;
+}
+
 .barchart>.title,
 .doughnut>.title {
     font-size: 20px;
@@ -32,10 +39,12 @@
     color: #00000080;
 }
 
+.barchart>.title{
+    margin-bottom: 25px;
+}
+
 .barchart>.title>span {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px;
+    font-weight: 500;
     text-align: left;
     color: #000;
 }
@@ -65,7 +74,7 @@
 .walletbalance>.balance,
 .noofjobs>.balance {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 44.8px;
     margin-bottom: 57px;
 }
@@ -76,7 +85,7 @@
 
 .walletbalance>.viewtransaction {
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 21px;
     color: #207EDF;
     margin-top: 44px;

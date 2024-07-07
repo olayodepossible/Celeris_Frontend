@@ -24,10 +24,10 @@ export const CelerisBtn = styled.button<ButtonProps>`
   border: none;
   padding:  10px 15px;
   width: 100%;
-  font-family: "DM Sans";
-  font-size: "16px";
-  font-weight: 700;
-  line-height: 16px;
+  font-family: "Poppins";
+  font-size: "12px";
+  font-weight: 500;
+  line-height: 12px;
   letter-spacing: 1.600000023841858px;
   text-align: center;
   &:disabled {

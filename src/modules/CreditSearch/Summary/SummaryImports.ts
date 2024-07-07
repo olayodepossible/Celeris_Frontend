@@ -103,7 +103,8 @@ export const radialChartoptions = {
           },
           value: {
             color: "#000",
-            fontSize: "30px",
+            offsetY: 10,
+            fontSize: "20px",
             show: true,
           },
         },

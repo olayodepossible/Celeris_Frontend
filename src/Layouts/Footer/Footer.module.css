@@ -1,13 +1,13 @@
 .footer {
     background: #010D50;
     width: 100%;
-    padding: 50px 125px;
+    padding: 50px 50px 50px 20px;
 }
 
-.footerCOntent {
+.footerContent {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 150px;
+    margin-bottom: 10px;
 }
 
 .socials {
@@ -17,7 +17,8 @@
 }
 
 .details>img {
-    margin-bottom: 74px;
+    margin-bottom: 25px;
+    margin-left: -7px;
 }
 
 .footerNav {
@@ -81,7 +82,7 @@
 .copywrite {
     margin-left: 25px;
     border-top: 1px solid rgba(255, 255, 255, .3);
-    padding-top: 30px;
+    padding-top: 10px;
     color: #fff;
     font-size: 16px;
     font-weight: 400;
@@ -95,7 +96,7 @@
     .socials{
         margin-left: 25px;
     }
-    .footerCOntent {
+    .footerC0ntent {
         margin-bottom: 0px;
         flex-direction: column;
         gap: 85px;

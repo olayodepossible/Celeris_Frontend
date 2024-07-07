@@ -36,7 +36,7 @@ const CreditSearch = () => {
             <Tab label="CRC" value="3" />
             <Tab label="First Central" value="4" />
           </TabList>
-          <div className="downloadBtn">
+          <div className="me-4 downloadBtn">
           <CelerisBtn variant="primary">
             <svg
               width="20"
@@ -50,7 +50,7 @@ const CreditSearch = () => {
                 fill="white"
               />
             </svg>
-            <span className="ms-1">DOWNLOAD REPORT</span>
+            <span className="ms-1 downloadtxt">DOWNLOAD REPORT</span>
           </CelerisBtn>
           </div>
         </Box>

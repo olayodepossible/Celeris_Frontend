@@ -31,7 +31,7 @@ export const columns: ColumnDef<any>[] = [
   },
   {
     header: () => "Analysis ID",
-    accessorKey: "analysis id",
+    accessorKey: "analysis_id",
   },
   {
     header: () => "File Name",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Sidebar.module.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo1 from "../../assets/logos/Logo1.png";
 import { links } from "./SidebarImports";
 import useWindowSize from "../../utils/customHooks/UseWindowSize";
@@ -12,6 +12,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ children }: SidebarProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const [isDesktop, setIsDesktop] = useState<boolean>(true);
+  const navigate = useNavigate()
 
   const [width, height] = useWindowSize();
 
@@ -56,6 +57,9 @@ const Sidebar: React.FC<SidebarProps> = ({ children }: SidebarProps) => {
                         setIsOpen(false);
                       }
                       console.log(isOpen);
+                      if (link.path.includes('signOut')) {
+                        navigate('/')
+                      }
                     }}
                   >
                     <NavLink to={link.path}>
