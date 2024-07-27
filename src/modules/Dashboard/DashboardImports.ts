@@ -141,6 +141,29 @@ export const pendingDoughChartoptions = {
   },
 };
 
+export const CenterTextPlugin = (percentage:string) =>{
+  return {
+    id: 'centerText',
+    beforeDraw: function (chart:any) {
+      const width = chart.width,
+        height = chart.height,
+        ctx = chart.ctx;
+  
+      ctx.restore();
+      const fontSize = (height / 200).toFixed(2);
+      ctx.font = fontSize + 'em sans-serif';
+      ctx.textBaseline = 'middle';
+  
+      const text = percentage,
+        textX = width / 5.5,
+        textY = height / 2;
+  
+      ctx.fillText(text, textX, textY);
+      ctx.save();
+    }
+  }
+};
+
 export const pendingDoughChartData = {
   labels: ["Altered: 250", "Failed: 250", "Timeout: 0"],
   datasets: [

@@ -1,3 +1,4 @@
+.decisionSum{width: 98%;}
 .detailsCard {
     width: 100%;
     border-radius: 10px;
@@ -24,20 +25,26 @@
     font-family: "DM Sans";
 }
 
-.cardContent p {
+.cardContent p, .creditScore p {
     font-size: 12px;
     font-weight: 400;
     margin-bottom: 2px;
     line-height: 16.8px;
 }
 
-.cardContent h5 {
+.cardContent h5, .creditScore h5 {
     font-weight: 700;
     font-size: 12px;
     font-weight: 700;
     line-height: 16.8px;
     text-align: left;
 
+}
+.creditScore{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 15px;
 }
 
 .customerDetails {

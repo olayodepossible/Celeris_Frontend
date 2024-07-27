@@ -8,7 +8,7 @@ import linkedin from "../../assets/logos/linkedin.png";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerCOntent}>
+      <div className={styles.footerContent}>
         <div className={styles.details}>
           <img src={logo1} alt="Celeris" />
           <span className={styles.footerNav}>

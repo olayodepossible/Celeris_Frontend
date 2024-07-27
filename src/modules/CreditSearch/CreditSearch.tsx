@@ -42,7 +42,7 @@ const CreditSearch = () => {
               <Tab label={tab.name} value={`${index + 1}`} />
             ))}
           </TabList>
-          <div className="downloadBtn">
+          <div className="me-4 downloadBtn">
           <CelerisBtn variant="primary">
             <svg
               width="20"
@@ -56,7 +56,7 @@ const CreditSearch = () => {
                 fill="white"
               />
             </svg>
-            <span className="ms-1">DOWNLOAD REPORT</span>
+            <span className="ms-1 downloadtxt">DOWNLOAD REPORT</span>
           </CelerisBtn>
           </div>
         </Box>

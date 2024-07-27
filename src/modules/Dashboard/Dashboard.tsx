@@ -6,6 +6,7 @@ import "./Dashboard.css";
 import Form from "../../shared/Forms/Form";
 import Charts, { ChartType } from "../../shared/Charts/Charts";
 import {
+  CenterTextPlugin,
   analysisformInputs,
   barChartData,
   barChartoptions,
@@ -96,6 +97,7 @@ const Dashboard = () => {
                     type={ChartType.Doughnut}
                     data={doughChartData}
                     options={doughChartoptions}
+                    plugins={[CenterTextPlugin("820")]}
                   />
                 </div>
                 <div className="doughnut">
@@ -104,6 +106,7 @@ const Dashboard = () => {
                     type={ChartType.Doughnut}
                     data={pendingDoughChartData}
                     options={pendingDoughChartoptions}
+                    plugins={[CenterTextPlugin("820")]}
                   />
                 </div>
               </div>

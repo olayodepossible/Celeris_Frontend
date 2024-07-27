@@ -72,7 +72,7 @@ ul {
 .selectWrapper input,
 select {
   border: 1px solid #C4C4C4;
-  width: 174px;
+  width: 135px;
   max-height: 31px;
   border-radius: 10px;
   font-family: "Poppins";
@@ -86,9 +86,10 @@ select {
   background-image: none;
   padding: 7px;
 }
+
 .selectWrapper input {
   z-index: 2;
-  width: 250px;
+  width: 200px;
   position: relative;
 }
 
@@ -113,12 +114,27 @@ body>div.ReactModalPortal>div>div {
 body>div.ReactModalPortal>div>div::-webkit-scrollbar {
   display: none;
 }
-.css-13xfq8m-MuiTabPanel-root{
+
+.css-13xfq8m-MuiTabPanel-root {
   padding: 24px 0 !important;
 }
-.MuiTabs-scrollButtons{
+
+.MuiTabs-scrollButtons {
   opacity: 0;
 }
+
 a.active {
   background: #1A1F37 !important;
+}
+
+.MuiPaginationItem-page {
+  background: #C4C4C480 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 18.2px !important;
+  text-align: center;
+}
+
+.MuiPaginationItem-page.Mui-selected {
+  background: #207EDF !important;
 }

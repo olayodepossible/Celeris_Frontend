@@ -72,7 +72,7 @@ const Summary = () => {
     <>
       {details && (
         <Fragment>
-          <div className="d-flex flex-lg-row flex-column justify-content-between w-100">
+          <div className="d-flex mb-4 flex-lg-row flex-column justify-content-between w-100">
             <div className="customerDetails d-flex flex-column align-items-center">
               <div className="detailsCard mb-3">
                 <h2 className="heading">Customer Details</h2>
