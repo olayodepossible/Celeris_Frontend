@@ -17,6 +17,13 @@ const CreditSearch = () => {
     setValue(newValue);
   };
 
+  const tabs: { name: string; value: any }[] = [
+    { name: "Summary", value: <Summary /> },
+    { name: "Credit Registry", value: <CreditRegistry /> },
+    { name: "CRC", value: <CRC /> },
+    { name: "First Central", value: <FirstCentral /> },
+  ];
+
   return (
     <Sidebar>
       <div className="header">
@@ -31,10 +38,9 @@ const CreditSearch = () => {
             scrollButtons="auto"
             aria-label="scrollable auto tabs example"
           >
-            <Tab label="Summary" value="1" />
-            <Tab label="Credit Registry" value="2" />
-            <Tab label="CRC" value="3" />
-            <Tab label="First Central" value="4" />
+            {tabs.map((tab, index) => (
+              <Tab label={tab.name} value={`${index + 1}`} />
+            ))}
           </TabList>
           <div className="downloadBtn">
           <CelerisBtn variant="primary">
@@ -54,19 +60,9 @@ const CreditSearch = () => {
           </CelerisBtn>
           </div>
         </Box>
-
-        <TabPanel value="1">
-          <Summary />
-        </TabPanel>
-        <TabPanel value="2">
-          <CreditRegistry />
-        </TabPanel>
-        <TabPanel value="3">
-          <CRC />
-        </TabPanel>
-        <TabPanel value="4">
-          <FirstCentral />
-        </TabPanel>
+        {tabs.map((tab, index) => (
+          <TabPanel value={`${index + 1}`}>{tab.value}</TabPanel>
+        ))}
       </TabContext>
     </Sidebar>
   );

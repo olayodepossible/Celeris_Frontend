@@ -1,0 +1,36 @@
+.settings>.heading {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 33.6px;
+	margin-bottom: 76px;
+}
+.update-info-heading {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19.6px;
+	margin-bottom: 15px;
+}
+
+.update-info-form{
+	padding: 30px 18px;
+	border-radius: 10px;
+	border: 1px solid #00000033;
+	margin-bottom: 50px;
+}
+.update-info-form:last-child{
+	margin-bottom: 0px;
+}
+.update-info-form > .update-profile,
+.update-info-form > .change-pass{
+	max-width: 35%;
+	margin: auto;
+	margin-top: 30px;
+}
+.update-info-form >.form > .form-group{
+	margin-bottom: 15px;
+}
+
+.update-info-form >.form> .form-group > input{
+	border-radius: 10px !important;
+	border: 1px solid #C4C4C4;
+}
