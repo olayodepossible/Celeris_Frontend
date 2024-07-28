@@ -18,7 +18,7 @@ export const organizationForm: IInputProps[] = [
 	
 	{
 	  label: "Phone Number",
-	  placeholder: "09012345678",
+	  placeholder: "your phone number",
 	  type: "input",
 	  value: [],
 	  isRequired: true,

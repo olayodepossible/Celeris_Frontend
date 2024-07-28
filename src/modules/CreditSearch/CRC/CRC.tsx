@@ -1,4 +1,3 @@
-import "./CRC.css";
 import {
   AccountLayout,
   AccountDetailsLayout,

@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import './PersonalInfo.css'
+import { useState } from 'react'
 
 import Form from '../../../shared/Forms/Form'
 import { changePasswordForm, personalInfoForm } from './PersonalInfoImports'

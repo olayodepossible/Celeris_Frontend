@@ -14,7 +14,8 @@
   max-width: 742px;
 }
 
-.submit, .getStated {
+.submit,
+.getStated {
   max-width: 185px;
 }
 
@@ -328,6 +329,10 @@
 .connect>img {
   max-width: 527px;
   max-height: 500px;
+}
+
+.connectForm {
+  width: 45%;
 }
 
 .formHeading {
