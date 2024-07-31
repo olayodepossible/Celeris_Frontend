@@ -1,39 +1,42 @@
 import styles from "../Landing.module.css";
 import Imports from "../Landing.imports";
 import { CelerisBtn } from "../../../shared/Button";
-import Form, { IInputProps } from "../../../shared/Forms/Form";
 import { useState } from "react";
+import Form from "../../../shared/Form/Form";
+import { FormField } from "../../../shared/Form/FormImports";
 
 const ConnectWithUs = () => {
   const [inputvalues, setInputvalues] = useState<{ [key: string]: string }>({});
-  const inputs: IInputProps[] = [
+  const inputs: FormField[] = [
     {
+      name:"Name",
       label: "Name",
       type: "text",
       placeholder: "Full name",
-      isRequired: true,
+      required: true,
       value: [],
     },
     {
+      name:"email",
       label: "Business email",
       type: "email",
       placeholder: "myname@company.com",
-      isRequired: true,
+      required: true,
       value: [],
     },
     {
+      name:"company",
       label: "Company",
       type: "text",
       placeholder: "Company Name",
-      isRequired: true,
+      required: true,
       value: [],
     },
     {
+      name:"additional info",
       label: "Please share anything that will help prepare for our meeting",
       type: "text",
       placeholder: "",
-      isRequired: true,
-      value: [],
     },
   ];
   const handleGetFormValues = (values: { [key: string]: string }) => {
@@ -43,7 +46,7 @@ const ConnectWithUs = () => {
   return (
     <section className="container">
       <div className={styles.connect}>
-        <img src={Imports.connect} alt="" />
+        <img data-aos="zoom-in" src={Imports.connect} alt="" />
         <form className={styles.connectForm}>
           <h3 className={styles.formHeading}>
             Connect with us to schedule a platform demonstration and explore
@@ -52,8 +55,7 @@ const ConnectWithUs = () => {
           </h3>
           <Form
             inputs={inputs}
-            onApplyFilters={handleGetFormValues}
-            isFilter={false}
+            onSubmit={handleGetFormValues}
             styles="d-flex flex-column"
           />
           <div className="d-flex align-items-center justify-content-center">
@@ -61,7 +63,7 @@ const ConnectWithUs = () => {
               <CelerisBtn
                 variant="primary"
                 rounded="true"
-                onClick={() => console.log(inputvalues)}
+                onClick={(e) => {e.preventDefault(); console.log(inputvalues)}}
               >
                 Submit
               </CelerisBtn>

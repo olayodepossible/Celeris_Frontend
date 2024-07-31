@@ -18,132 +18,138 @@ import about from "../../assets/images/about.svg";
 import connect from "../../assets/images/connect.png";
 
 export interface ICompaniesProps {
-  icon: string;
-  name: string;
+	icon: string;
+	name: string;
+	aos?: string;
 }
 export interface ISlider extends ICompaniesProps {
-  comment: string;
-  role: string;
-  company: string;
+	comment: string;
+	role: string;
+	company: string;
 }
 export const companies: ICompaniesProps[] = [
-  {
-    icon: company1,
-    name: "Company Name",
-  },
-  {
-    icon: company2,
-    name: "Company Name",
-  },
-  {
-    icon: company3,
-    name: "Company Name",
-  },
-  {
-    icon: company4,
-    name: "Company Name",
-  },
-  {
-    icon: company5,
-    name: "Company Name",
-  },
+	{
+		icon: company1,
+		name: "Company Name",
+		aos: "fade-right"
+	},
+	{
+		icon: company2,
+		name: "Company Name",
+    aos: "fade-up"
+	},
+	{
+		icon: company3,
+		name: "Company Name",
+    aos: "zoom-in"
+	},
+	{
+		icon: company4,
+		name: "Company Name",
+    aos: "fade-up"
+	},
+	{
+		icon: company5,
+		name: "Company Name",
+    aos: "fade-left"
+	},
 ];
 export const sliderItems: ISlider[] = [
-  {
-    icon: company1,
-    name: "John carter",
-    comment:
-      "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
-    role: "CEO",
-    company: "Company",
-  },
-  {
-    icon: company2,
-    name: "John carter",
-    comment:
-      "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
-    role: "CEO",
-    company: "Company",
-  },
-  {
-    icon: company3,
-    name: "John carter",
-    comment:
-      "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
-    role: "CEO",
-    company: "Company",
-  },
-  {
-    icon: company4,
-    name: "John carter",
-    comment:
-      "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
-    role: "CEO",
-    company: "Company",
-  },
-  {
-    icon: company5,
-    name: "John carter",
-    comment:
-      "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
-    role: "CEO",
-    company: "Company",
-  },
+	{
+		icon: company1,
+		name: "John carter",
+		comment:
+			"“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
+		role: "CEO",
+		company: "Company",
+	},
+	{
+		icon: company2,
+		name: "John carter",
+		comment:
+			"“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
+		role: "CEO",
+		company: "Company",
+	},
+	{
+		icon: company3,
+		name: "John carter",
+		comment:
+			"“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
+		role: "CEO",
+		company: "Company",
+	},
+	{
+		icon: company4,
+		name: "John carter",
+		comment:
+			"“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
+		role: "CEO",
+		company: "Company",
+	},
+	{
+		icon: company5,
+		name: "John carter",
+		comment:
+			"“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
+		role: "CEO",
+		company: "Company",
+	},
 ];
 export const settings = {
-  dots: false,
-  infinite: true,
-  speed: 2000,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  pauseOnHover: true,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
+	dots: false,
+	infinite: true,
+	speed: 2000,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	autoplay: true,
+	autoplaySpeed: 3000,
+	pauseOnHover: true,
+	responsive: [
+		{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				infinite: true,
+				dots: true,
+			},
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				initialSlide: 2,
+			},
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			},
+		},
+	],
 };
 
 export default {
-  analysis,
-  company1,
-  company2,
-  company3,
-  company4,
-  company5,
-  report,
-  explore,
-  bigData,
-  turnAround,
-  finance2,
-  secure,
-  expansion,
-  lowfee,
-  fast,
-  encryption,
-  about,
-  connect,
+	analysis,
+	company1,
+	company2,
+	company3,
+	company4,
+	company5,
+	report,
+	explore,
+	bigData,
+	turnAround,
+	finance2,
+	secure,
+	expansion,
+	lowfee,
+	fast,
+	encryption,
+	about,
+	connect,
 };

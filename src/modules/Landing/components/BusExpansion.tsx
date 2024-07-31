@@ -4,10 +4,10 @@ import Imports from "../Landing.imports";
 const BusExpansion = () => {
   return (
     <section className="row justify-content-between position-relative g-5 row-cols-xl-2 row-cols-lg-1">
-      <div className={styles.busImg}>
+      <div data-aos="zoom-in" className={styles.busImg}>
         <img src={Imports.expansion} alt="Business Expansion Image" />
       </div>
-      <div className={styles.busExpansion}>
+      <div data-aos="fade-left" className={styles.busExpansion}>
         <h2>
           Your business is poised for expansion. Our solution is designed to
           fuel it.

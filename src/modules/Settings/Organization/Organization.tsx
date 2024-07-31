@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Form from '../../../shared/Forms/Form'
 import { CelerisBtn } from '../../../shared/Button'
 import { columns, data, organizationForm } from './OrganizationImport'
 import Table from '../../../shared/Table/Table'
+import Form from '../../../shared/Form/Form'
 
 type Props = {}
 
@@ -17,7 +17,7 @@ const Organization = (props: Props) => {
     <>
       <h2 className="update-info-heading">Add Team Member</h2>
 		 <div className='update-info-form'>
-			<Form inputs={organizationForm} onApplyFilters={handleUpdateProfile} isFilter={false} styles='row row-cols-lg-2 row-cols-1 w-100'/>
+			<Form inputs={organizationForm} onSubmit={handleUpdateProfile} styles='row row-cols-lg-2 row-cols-1 w-100'/>
 			<div className='update-profile'>
 				<CelerisBtn variant='primary' onClick={() => handleUpdateProfile(profile)}>ADD MEMBER</CelerisBtn>
 			</div>

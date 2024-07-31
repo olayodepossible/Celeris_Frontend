@@ -6,7 +6,10 @@ import Card from "../../../shared/Card/Card";
 const Insights = () => {
   return (
     <section className={styles.insights}>
-      <div className="d-flex flex-column justify-content-center align-items-center">
+      <div
+        data-aos="zoom-in-up"
+        className="d-flex flex-column justify-content-center align-items-center"
+      >
         <h4 className={styles.insightsHeading}>
           Actionable Insights for accurate decisioning
         </h4>
@@ -16,7 +19,7 @@ const Insights = () => {
         </p>
       </div>
       <div className="row row-cols-lg-3 g-4 row-cols-sm-1">
-        <div className="d-flex gap2 flex-sm-row flex-md-column align-items-center justify-content-between">
+        <div data-aos="fade-right" className="d-flex gap2 flex-sm-row flex-md-column align-items-center justify-content-between">
           <Card
             img={Imports.report}
             title="Credit Analysis and Reporting"
@@ -28,7 +31,8 @@ const Insights = () => {
             content="Save cost and explore a credit journey at a go!"
           />
         </div>
-        <div className={styles.bigdata}>
+
+        <div data-aos="zoom-in-up" className={styles.bigdata}>
           <h2 className={styles.bigdataHeading}>credit in a box</h2>
           <p className={styles.bigdataSubheading}>
             Automate your loan origination, bank statement request and review,
@@ -41,7 +45,7 @@ const Insights = () => {
             className="img-responsive"
           />
         </div>
-        <div className="d-flex gap1 flex-sm-row flex-md-column align-items-center justify-content-between">
+        <div data-aos="fade-left" className="d-flex gap1 flex-sm-row flex-md-column align-items-center justify-content-between">
           <Card
             img={Imports.report}
             title="Credit Analysis and Reporting"

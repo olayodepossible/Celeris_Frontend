@@ -1,4 +1,4 @@
-import { IInputProps } from "../../shared/Forms/Form";
+import { FormField } from "../../shared/Form/FormImports";
 
 export const filterInputs = [
   {
@@ -13,50 +13,56 @@ export const filterInputs = [
     value: ["Under $50", "$50 to $100", "Above $100"],
   },
 ];
-export const analysisformInputs: IInputProps[] = [
+
+export const analysisformInputs: FormField[] = [
   {
+    name: "file type",
     label: "File Type",
     placeholder: "Select File Type",
     type: "select",
     value: ["Electronics", "Books", "Clothing"],
-    isRequired: true,
+    required: true,
   },
   {
+    name: "statement",
     label: "Statement Type",
     placeholder: "Select Statement Type",
     type: "select",
     value: ["Apple", "Samsung", "Sony"],
-    isRequired: true,
+    required: true,
   },
   {
+    name: "bank name",
     label: "Bank Name",
     placeholder: "Select Bank",
     type: "select",
     value: ["Under $50", "$50 to $100", "Above $100"],
-    isRequired: true,
+    required: true,
   },
   {
+    name: "file password",
     label: "File Password (optional)",
     placeholder: "Enter File Password",
-    type: "input",
-    value: [],
+    type: "password",
   },
 ];
-export const creditReportformInputs: IInputProps[] = [
+
+export const creditReportformInputs: FormField[] = [
   {
+    name: "bvn",
     label: "Bank Verification Number",
     placeholder: "Enter BVN",
-    type: "input",
-    value: [],
-    isRequired: true,
+    type: "text",
+    required: true,
   },
   {
+    name: "report password",
     label: "Report Period (optional)",
     placeholder: "Enter File Password",
-    type: "input",
-    value: [],
+    type: "password",
   },
 ];
+
 export const barChartoptions = {
   elements: {
     bar: {
@@ -79,6 +85,7 @@ export const barChartoptions = {
     },
   },
 };
+
 export const barChartData = {
   labels: [],
   datasets: [
@@ -141,27 +148,27 @@ export const pendingDoughChartoptions = {
   },
 };
 
-export const CenterTextPlugin = (percentage:string) =>{
+export const CenterTextPlugin = (percentage: string) => {
   return {
-    id: 'centerText',
-    beforeDraw: function (chart:any) {
+    id: "centerText",
+    beforeDraw: function (chart: any) {
       const width = chart.width,
         height = chart.height,
         ctx = chart.ctx;
-  
+
       ctx.restore();
       const fontSize = (height / 200).toFixed(2);
-      ctx.font = fontSize + 'em sans-serif';
-      ctx.textBaseline = 'middle';
-  
+      ctx.font = fontSize + "em sans-serif";
+      ctx.textBaseline = "middle";
+
       const text = percentage,
         textX = width / 5.5,
         textY = height / 2;
-  
+
       ctx.fillText(text, textX, textY);
       ctx.save();
-    }
-  }
+    },
+  };
 };
 
 export const pendingDoughChartData = {
@@ -176,13 +183,14 @@ export const pendingDoughChartData = {
     },
   ],
 };
+
 export const drawPercentagePlugin = {
   id: "drawPercentage",
   beforeDraw: (chart: any) => {
     const { ctx, data } = chart;
     const total = data.datasets[0].data.reduce(
       (acc: any, value: any) => acc + value,
-      0,
+      0
     );
     const percentage = Math.round((data.datasets[0].data[0] / total) * 100);
 

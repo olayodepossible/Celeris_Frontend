@@ -3,7 +3,6 @@ import Modal from "react-modal";
 
 import Sidebar from "../../Layouts/Sidebar/Sidebar";
 import "./Dashboard.css";
-import Form from "../../shared/Forms/Form";
 import Charts, { ChartType } from "../../shared/Charts/Charts";
 import {
   CenterTextPlugin,
@@ -21,6 +20,8 @@ import { CelerisBtn } from "../../shared/Button";
 import DragNDrop from "../../shared/DragNDrop/DragNDrop";
 import useChartQuery from "../../utils/customHooks/UseChartQuery";
 import Loader from "../../shared/Loader/Loader";
+import Filter from "../../shared/Filter/Filter";
+import Form from "../../shared/Form/Form";
 
 Modal.setAppElement("#root");
 const Dashboard = () => {
@@ -58,8 +59,7 @@ const Dashboard = () => {
         <div className="content">
           <h2 className="header">Hi, Admin Name,</h2>
           <div className="filters d-flex justify-content-center">
-            <Form
-              isFilter={true}
+            <Filter
               styles="d-flex justify-content-between"
               inputs={filterInputs}
               onApplyFilters={handleApplyFilters}
@@ -172,13 +172,14 @@ const Dashboard = () => {
                     </span>
                   </h2>
                 </div>
-                <Form
-                  isFilter={false}
-                  inputs={analysisformInputs}
-                  onApplyFilters={handleApplyFilters}
-                  onFormValidityChange={handleFormValidityChange}
-                  styles="d-flex flex-column justify-content-center align-items-center"
-                />
+                <div className="analysisFormInputs">
+                  <Form
+                    inputs={analysisformInputs}
+                    onSubmit={handleApplyFilters}
+                    onFormValidityChange={handleFormValidityChange}
+                    styles="d-flex flex-column justify-content-center align-items-center"
+                  />
+                </div>
                 <div>
                   <DragNDrop onDrop={handleDragNDrop} />
                 </div>
@@ -284,13 +285,14 @@ const Dashboard = () => {
                   </span>
                 </h2>
               </div>
+              <div className="analysisFormInputs">
               <Form
-                isFilter={false}
                 inputs={creditReportformInputs}
-                onApplyFilters={handleApplyFilters}
+                onSubmit={handleApplyFilters}
                 onFormValidityChange={handleFormValidityChange}
                 styles="d-flex flex-column justify-content-center align-items-center"
               />
+              </div>
               <CelerisBtn variant="primary" disabled={!isFormValid}>
                 Analyze Bank Statement
               </CelerisBtn>
