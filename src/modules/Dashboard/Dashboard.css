@@ -144,6 +144,9 @@
     font-weight: 500;
     line-height: 18px;
 }
+.analysisFormInputs> .form .form-group{
+    width: 100%;
+}
 
 .file {
     border-radius: 10px;

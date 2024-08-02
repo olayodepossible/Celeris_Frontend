@@ -7,10 +7,10 @@ import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import Form from "../../shared/Forms/Form";
 import { CelerisBtn } from "../../shared/Button";
 import "./JobList.css";
 import ProgressBar from "../../shared/ProgressBar/ProgressBar";
+import Filter from "../../shared/Filter/Filter";
 
 const JobList = () => {
   const [value, setValue] = React.useState("1");
@@ -38,10 +38,9 @@ const JobList = () => {
         </Box>
         <TabPanel value="1">
           <div className="d-flex flex-lg-row flex-column justify-content-between w-100 mb-3">
-            <Form
+            <Filter
               inputs={filterInputs}
               styles="d-flex"
-              isFilter={true}
               button={{
                 text: "SUBMIT",
               }}

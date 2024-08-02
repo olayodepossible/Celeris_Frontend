@@ -7,7 +7,7 @@ const Explore = () => {
     <section
       className={`d-flex flex-lg-row flex-column-reverse ${styles.explore}`}
     >
-      <div className={styles.exploreContent}>
+      <div data-aos="fade-right" className={styles.exploreContent}>
         <h2>Explore endless possibilities with Celeris</h2>
         <p>
           Discover the transformative potential of AI-driven insights in
@@ -19,7 +19,7 @@ const Explore = () => {
           </CelerisBtn>
         </div>
       </div>
-      <div>
+      <div data-aos="fade-up">
         <img
           src={Imports.explore}
           alt="explore"

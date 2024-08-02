@@ -6,8 +6,8 @@ const AboutUs = () => {
     <section className={`container ${styles.aboutUS}`}>
       <div className="d-flex flex-lg-row flex-column-reverse align-items-center justify-content-between">
         <div className={styles.aboutContent}>
-          <h2>About Us</h2>
-          <div>
+          <h2 data-aos="fade-in">About Us</h2>
+          <div data-aos="fade-right">
             <span>
               At Celeris, we're dedicated to driving innovation and empowering
               lenders to thrive in the digital age.
@@ -29,7 +29,7 @@ const AboutUs = () => {
             </span>
           </div>
         </div>
-        <div>
+        <div data-aos="zoom-in-up">
           <img src={Imports.about} alt="" className={styles.aboutImg} />
         </div>
       </div>

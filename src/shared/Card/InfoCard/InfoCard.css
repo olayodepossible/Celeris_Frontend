@@ -40,30 +40,3 @@
         border-bottom: 1px solid #00000033;
     }
 }
-
-/* @media (max-width: 767px) {
-
-    .infoCard div {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-    }
-    .infoCard div:nth-child(2) {
-            padding: 15px;
-            border: none;
-            border-top: 1px solid #00000033;
-            border-bottom: 1px solid #00000033;
-        }
-    
-        .infoCard div:nth-child(3) {
-            border: none;
-            border-bottom: 1px solid #00000033;
-        }
-    
-        .linechart,
-        .customerDetails,
-        .credits,
-        .bar {
-            width: 100%;
-        }
-    } */

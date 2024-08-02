@@ -1,11 +1,10 @@
 import Sidebar from "../../Layouts/Sidebar/Sidebar";
 import "./StatementDetail.css";
-import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabPanel from "@mui/lab/TabPanel";
 import React from "react";
 import Summary from "./Summary/Summary";
-import Box from "@mui/material/Box";
+import { Box, Tab } from "@mui/material";
 import TabList from "@mui/lab/TabList";
 import { CelerisBtn } from "../../shared/Button";
 import Behavioral from "./Behavioral/Behavioral";
@@ -27,6 +26,13 @@ const StatementDetail = () => {
     setValue(newValue);
   };
 
+  const tabs:{name:string, value:any}[] = [
+    { name: "Summary", value: <Summary /> },
+    { name: "Cash Flow Analysis", value: <CashFlow /> },
+    { name: "Behavioral", value:  <Behavioral /> },
+    { name: "Transactions", value: <Transactions /> },
+  ];
+
   return (
     <Sidebar>
       <div className="header">
@@ -34,17 +40,16 @@ const StatementDetail = () => {
         <p className="subheading">ID: {details[0].analysis_id}</p>
       </div>
       <TabContext value={value}>
-        <Box className="d-flex justify-content-between w-100">
+      <Box className="d-flex justify-content-between w-100">
           <TabList
             onChange={handleChange}
             variant="scrollable"
             scrollButtons="auto"
             aria-label="scrollable auto tabs example"
           >
-            <Tab label="Summary" value="1" />
-            <Tab label="Cash Flow Analysis" value="2" />
-            <Tab label="Behavioral" value="3" />
-            <Tab label="Transactions" value="4" />
+            {tabs.map((tab, index) => (
+              <Tab label={tab.name} value={`${index + 1}`} />
+            ))}
           </TabList>
           <div className="downloadBtn me-3">
             <CelerisBtn variant="primary">
@@ -64,18 +69,9 @@ const StatementDetail = () => {
             </CelerisBtn>
           </div>
         </Box>
-        <TabPanel value="1">
-          <Summary />
-        </TabPanel>
-        <TabPanel value="2">
-          <CashFlow />
-        </TabPanel>
-        <TabPanel value="3">
-          <Behavioral />
-        </TabPanel>
-        <TabPanel value="4">
-          <Transactions />
-        </TabPanel>
+        {tabs.map((tab, index) => (
+          <TabPanel value={`${index + 1}`}>{tab.value}</TabPanel>
+        ))}
       </TabContext>
     </Sidebar>
   );

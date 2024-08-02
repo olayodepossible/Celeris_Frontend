@@ -15,6 +15,7 @@ const Landing = lazy(() => import("./modules/Landing/Landing"));
 const Login = lazy(() => import("./modules/Login/Login"));
 const Dashboard = lazy(() => import("./modules/Dashboard/Dashboard"));
 const CreditSearch = lazy(() => import("./modules/CreditSearch/CreditSearch"));
+const Settings = lazy(() => import("./modules/Settings/Settings"));
 const DecisionEngine = lazy(
   () => import("./modules/DecisionEngine/DecisionEngine"),
 );
@@ -61,6 +62,14 @@ const App = () => {
             element={
               <AuthGuard>
                 <CreditSearch />
+              </AuthGuard>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <AuthGuard>
+                <Settings />
               </AuthGuard>
             }
           />
